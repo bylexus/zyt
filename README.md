@@ -9,7 +9,7 @@ At the moment, only "Züri Düütsch", a Zurich based Swiss German dialect, is a
 
 A screenshot:
 
-!(First Screenshot)[2016-08-08-u07ny.png]
+!(First Screenshot)[./2016-08-08-u07ny.png]
 
 Dev
 ---
