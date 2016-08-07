@@ -80,7 +80,7 @@ class ClockWords extends React.Component {
                         }
 
                         return item.split('').map((char,charIndex) => (
-                            <div className={char === '.' ? 'pulse':''} style={style} key={charIndex}>{char}</div>
+                            <div className={char === '.' ? 'pulse word-animation':'word-animation'} style={style} key={charIndex}>{char}</div>
                         ));
                     })}
                 </div>

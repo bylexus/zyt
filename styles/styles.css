@@ -20,6 +20,10 @@ body {
     animation: pulse 1s infinite;
 }
 
+.word-animation {
+    transition: color 2s, text-shadow 2s;
+}
+
 @keyframes pulse {
     0% {
         color: #333;
