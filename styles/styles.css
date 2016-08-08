@@ -3,18 +3,28 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     background-color: black;
-    color: #333;
-    font-weight: bold;
 }
 
 #app {
     height: 100%;
 }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+button.settings {
+    border: none;
+}
+
 
 .pulse {
     animation: pulse 1s infinite;
@@ -35,3 +45,22 @@ body {
         color: #333;
     }
 }
+
+
+.settings-dialog.container {
+    position: absolute;
+    left: 5px;
+    bottom: 55px;
+    min-width: 300px;
+    background-color: #345;
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 5px;
+    color: #ccc;
+}
+
+
+.settings-dialog label span {
+    display: inline-block;
+    width: 120px;
+ }

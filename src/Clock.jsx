@@ -25,9 +25,13 @@ class Clock extends React.Component {
 
     render() {
         return (
-        <ClockWords date={this.state.date} lang="zueri"/>
+        <ClockWords date={this.state.date} lang={this.context.settings.lang}/>
         );
     }
 }
+
+Clock.contextTypes = {
+    settings: React.PropTypes.object.isRequired
+};
 
 export default Clock;

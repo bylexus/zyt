@@ -1,15 +1,15 @@
 const words_zueri = [
     // 12 chars per line
-    ['ÄS','K','ISCH','A','FOIF'],
-    ['ZÄÄ','KE','VIERTEL'],
+    ['ES','K','ISCH','A','FÜF','J'],
+    ['ZÄÄ','KE','VIERTU','M'],
     ['ZWÄNZG','K','VOR','AB'],
-    ['HALBI','KA','EIS','AT'],
-    ['ZWEI','AK','DRÜÜ','TV'],
-    ['VIERI','P','FOIFI','T'],
+    ['HAUBI','KA','EIS','AT'],
+    ['ZWÖI','AK','DRÜÜ','TV'],
+    ['VIERI','P','FÜFI','TA'],
     ['SÄCHSI','P','SIBNI'],
     ['ACHTI','P','NÜNI','LW'],
-    ['ZÄNI','PA','ELFI','LW'],
-    ['TAZ','ZWÖLFI','PA','.']
+    ['ZÄNI','PA','EUFI','LW'],
+    ['TAZ','ZWÖUFI','PA','.']
 ];
 
 const times_zueri = {

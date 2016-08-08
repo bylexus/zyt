@@ -1,7 +1,6 @@
 import React from 'react';
+import hex2rgba from 'hex-rgba';
 import timeInfo from './times';
-
-
 
 function indexMatch(needleArr, haystack) {
     for (let i = 0; i < haystack.length; i++) {
@@ -19,9 +18,10 @@ class ClockWords extends React.Component {
 
     getContainerStyles() {
         return {
-            'fontFamily': 'courier',
+            'fontFamily': '"Courier New",courier',
             'fontSize': '50px',
             'display':'flex',
+            'backgroundColor': this.context.settings.bgColor,
             'flexDirection': 'column',
             'flexWrap': 'nowrap',
             'justifyContent':'space-between',
@@ -61,8 +61,8 @@ class ClockWords extends React.Component {
         let { words } = this.getTimeInfo();
 
         let actualStyle = {
-            color: 'white',
-            textShadow: '0 0 9px rgba(255,255,255,0.9)'
+            color: this.context.settings.fgActiveColor,
+            textShadow: '0 0 9px '+hex2rgba(this.context.settings.fgActiveColor,90)
         };
         return (
             <div style={this.getContainerStyles()}>
@@ -72,7 +72,9 @@ class ClockWords extends React.Component {
                         let style = {
                             'flexGrow': 1,
                             'textAlign': 'center',
-                            'fontSize':'10vmin'
+                            'fontSize': (100 / words.length) + 'vmin',
+                            'fontWeight': 'bold',
+                            'color': this.context.settings.fgDimmedColor
                         };
                         let needle = [lineIndex, itemIndex];
                         if (indexMatch(needle,always) || indexMatch(needle,minute) || indexMatch(needle,hour)) {
@@ -93,6 +95,9 @@ class ClockWords extends React.Component {
 ClockWords.propTypes = {
     date: React.PropTypes.instanceOf(Date).isRequired,
     lang: React.PropTypes.string.isRequired
+};
+ClockWords.contextTypes = {
+    settings: React.PropTypes.object
 };
 
 export default ClockWords;

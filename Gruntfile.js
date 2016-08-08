@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    'app-debug.js': ['src/app.jsx']
+                    'app.js': ['src/app.jsx']
                 }
             },
             prod: {
@@ -42,12 +42,30 @@ module.exports = function(grunt) {
                     'build/app.js': 'build/app.js'
                 }
             }
+        },
+        copy: {
+            build: {
+                files: [{
+                    expand: true,
+                    src: ['index.html','styles/**','resources/**'],
+                    dest: 'build/'
+                }]
+            }
+        },
+        env: {
+            dev: {
+                NODE_ENV: 'development'
+            },
+            build: {
+                NODE_ENV: 'production'
+            }
         }
+
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['browserify:dev']);
-    grunt.registerTask('build:prod', ['browserify:prod','uglify:prod']);
+    grunt.registerTask('default', ['env:dev','browserify:dev']);
+    grunt.registerTask('build:prod', ['env:build','browserify:prod','copy:build','uglify:prod']);
 
 };
 
