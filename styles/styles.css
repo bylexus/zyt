@@ -19,8 +19,13 @@ body {
     height: 100%;
 }
 
-button.settings {
-    border: none;
+
+button {
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: #3A4A5A;
+    color: #ccc;
+    border-radius: 10px;
 }
 
 
@@ -52,20 +57,25 @@ button.settings {
     bottom: 0;
     right: 0;
     margin: auto;
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 300px;
     background-color: #345;
     border: 1px solid #888;
     border-radius: 10px;
     padding: 5px;
     color: #ccc;
-    box-shadow: 0 0 40px #000, 0 0 40px #000,0 0 40px #000;
+    box-shadow: 0 0 40px #000;
 }
 
 
 .settings-dialog label span {
     display: inline-block;
     width: 120px;
+}
+
+.settings-dialog fieldset {
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
 }
 
 .no-select {

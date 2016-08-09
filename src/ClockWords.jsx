@@ -59,26 +59,40 @@ class ClockWords extends React.Component {
     render() {
         let {minute, hour, always} = this.normalizeDate(this.props.date);
         let { words } = this.getTimeInfo();
+        let {
+            activeShadowX,
+            activeShadowY,
+            activeShadowBlur,
+            activeShadowColor,
+            dimmedShadowX,
+            dimmedShadowY,
+            dimmedShadowBlur,
+            dimmedShadowColor,
+            fgActiveColor,
+            fgDimmedColor,
+        } = this.context.settings;
 
         let actualStyle = {
-            color: this.context.settings.fgActiveColor,
-            textShadow: '0 0 9px '+hex2rgba(this.context.settings.fgActiveColor,90)
+            color: fgActiveColor,
+            textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${hex2rgba(activeShadowColor,90)}`
+        };
+        let dimmedStyle = {
+            'flexGrow': 1,
+            'textAlign': 'center',
+            'alignSelf': 'flex-end',
+            'fontSize': (100 / (words.length)) + 'vmin',
+            'lineHeight': (100 / (words.length)) + 'vmin',
+            'fontWeight': 'bold',
+            'color': fgDimmedColor,
+            textShadow: `${dimmedShadowX}px ${dimmedShadowY}px ${dimmedShadowBlur}px ${hex2rgba(dimmedShadowColor,90)}`
         };
         return (
             <div style={this.getContainerStyles()} onClick={this.props.onClick}>
             {words.map((line,lineIndex) => (
                 <div key={lineIndex} style={this.getLineStyles()} className="no-select">
                     {line.map((item,itemIndex) => {
-                        let style = {
-                            'flexGrow': 1,
-                            'textAlign': 'center',
-                            'alignSelf': 'flex-end',
-                            'fontSize': (100 / (words.length)) + 'vmin',
-                            'lineHeight': (100 / (words.length)) + 'vmin',
-                            'fontWeight': 'bold',
-                            'color': this.context.settings.fgDimmedColor
-                        };
                         let needle = [lineIndex, itemIndex];
+                        let style = Object.assign({},dimmedStyle);
                         if (indexMatch(needle,always) || indexMatch(needle,minute) || indexMatch(needle,hour)) {
                             style = Object.assign(style,actualStyle);
                         }

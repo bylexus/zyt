@@ -5,6 +5,14 @@ export const settings = Object.assign({
     bgColor: '#000000',
     fgDimmedColor: '#333333',
     fgActiveColor: '#ffffff',
+    activeShadowX: '2',
+    activeShadowY: '2',
+    activeShadowBlur: '5',
+    activeShadowColor: '#ffffff',
+    dimmedShadowX: '0',
+    dimmedShadowY: '0',
+    dimmedShadowBlur: '0',
+    dimmedShadowColor: '#000000',
     lang: 'zueri'
 }, JSON.parse(localStorage.getItem('as-clock')) || {});
 
@@ -48,6 +56,24 @@ export class SettingsDlg extends React.Component {
                 <div><label><span>BG:</span> <input type="color" name="bgColor" value={this.state.bgColor} onChange={this.changeSetting} /></label></div>
                 <div><label><span>FG dimmed:</span> <input type="color" name="fgDimmedColor" value={this.state.fgDimmedColor} onChange={this.changeSetting}/></label></div>
                 <div><label><span>FG active:</span> <input type="color" name="fgActiveColor" value={this.state.fgActiveColor} onChange={this.changeSetting}/></label></div>
+                <fieldset>
+                    <legend>FG active shadow</legend>
+                    <div>
+                        <label>dX: <input type="number" min="0" name="activeShadowX" value={this.state.activeShadowX} onChange={this.changeSetting} style={{width: '30px'}}/></label>&nbsp;
+                        <label>dY: <input type="number" min="0" name="activeShadowY" value={this.state.activeShadowY} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label>blur: <input type="number" min="0" name="activeShadowBlur" value={this.state.activeShadowBlur} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label><input type="color" name="activeShadowColor" value={this.state.activeShadowColor} onChange={this.changeSetting}/></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>FG dimmed shadow</legend>
+                    <div>
+                        <label>dX: <input type="number" min="0" name="dimmedShadowX" value={this.state.dimmedShadowX} onChange={this.changeSetting} style={{width: '30px'}}/></label>&nbsp;
+                        <label>dY: <input type="number" min="0" name="dimmedShadowY" value={this.state.dimmedShadowY} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label>blur: <input type="number" min="0" name="dimmedShadowBlur" value={this.state.dimmedShadowBlur} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label><input type="color" name="dimmedShadowColor" value={this.state.dimmedShadowColor} onChange={this.changeSetting}/></label>
+                    </div>
+                </fieldset>
                 <div><button onClick={this.toggleFullScreen}>Toggle Full Screen</button></div>
             </div>
         );

@@ -1,6 +1,6 @@
 const words_zueri = [
     // 12 chars per line
-    ['ÄS','K','ISCH','A','FOIF'],
+    ['ES','K','ISCH','A','FOIF'],
     ['ZÄÄ','KE','VIERTEL'],
     ['ZWÄNZG','K','VOR','AB'],
     ['HALBI','KA','EIS','AT'],
