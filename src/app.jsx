@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 
 import Clock from './Clock.jsx';
 import Settings, {SettingsDlg} from './Settings.jsx';
-import SettingsBar from './SettingsBar.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,12 +13,10 @@ class App extends React.Component {
         };
     }
 
-
     render() {
         return (
-            <div className="app-container" style={{backgroundColor: this.context.settings.bgColor}}>
-                <Clock style={{flexGrow: 1}}/>
-                <SettingsBar handleSettingsBtn={() => this.setState({showSettingsDlg: !this.state.showSettingsDlg})} />
+            <div className="app-container" style={{backgroundColor: this.context.settings.bgColor}} >
+                <Clock style={{height: '100%'}} onClick={() => this.setState({showSettingsDlg: !this.state.showSettingsDlg})}/>
                 {this.state.showSettingsDlg && <SettingsDlg /> }
             </div>
         );

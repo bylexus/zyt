@@ -16,8 +16,6 @@ body {
 }
 
 .app-container {
-    display: flex;
-    flex-direction: column;
     height: 100%;
 }
 
@@ -49,18 +47,32 @@ button.settings {
 
 .settings-dialog.container {
     position: absolute;
-    left: 5px;
-    bottom: 55px;
-    min-width: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 200px;
     background-color: #345;
     border: 1px solid #888;
     border-radius: 10px;
     padding: 5px;
     color: #ccc;
+    box-shadow: 0 0 40px #000, 0 0 40px #000,0 0 40px #000;
 }
 
 
 .settings-dialog label span {
     display: inline-block;
     width: 120px;
- }
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

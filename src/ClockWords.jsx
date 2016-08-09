@@ -65,14 +65,15 @@ class ClockWords extends React.Component {
             textShadow: '0 0 9px '+hex2rgba(this.context.settings.fgActiveColor,90)
         };
         return (
-            <div style={this.getContainerStyles()}>
+            <div style={this.getContainerStyles()} onClick={this.props.onClick}>
             {words.map((line,lineIndex) => (
-                <div key={lineIndex} style={this.getLineStyles()}>
+                <div key={lineIndex} style={this.getLineStyles()} className="no-select">
                     {line.map((item,itemIndex) => {
                         let style = {
                             'flexGrow': 1,
                             'textAlign': 'center',
-                            'fontSize': (100 / words.length) + 'vmin',
+                            'fontSize': (100 / (words.length)) + 'vmin',
+                            'lineHeight': (100 / (words.length)) + 'vmin',
                             'fontWeight': 'bold',
                             'color': this.context.settings.fgDimmedColor
                         };
@@ -94,7 +95,8 @@ class ClockWords extends React.Component {
 
 ClockWords.propTypes = {
     date: React.PropTypes.instanceOf(Date).isRequired,
-    lang: React.PropTypes.string.isRequired
+    lang: React.PropTypes.string.isRequired,
+    onClick: React.PropTypes.func.isRequired
 };
 ClockWords.contextTypes = {
     settings: React.PropTypes.object
