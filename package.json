@@ -67,6 +67,7 @@
     "moment": "^2.14.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "screenfull": "^3.0.0",
     "uglifyify": "^3.0.2"
   }
 }

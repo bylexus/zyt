@@ -1,4 +1,5 @@
 import React from 'react';
+import screenfull from 'screenfull';
 
 export const settings = Object.assign({
     bgColor: '#000000',
@@ -29,6 +30,12 @@ export class SettingsDlg extends React.Component {
         });
     }
 
+    toggleFullScreen() {
+        if (screenfull.enabled) {
+            screenfull.toggle();
+        }
+    }
+
     render() {
         return (
             <div className="settings-dialog container">
@@ -41,6 +48,7 @@ export class SettingsDlg extends React.Component {
                 <div><label><span>BG:</span> <input type="color" name="bgColor" value={this.state.bgColor} onChange={this.changeSetting} /></label></div>
                 <div><label><span>FG dimmed:</span> <input type="color" name="fgDimmedColor" value={this.state.fgDimmedColor} onChange={this.changeSetting}/></label></div>
                 <div><label><span>FG active:</span> <input type="color" name="fgActiveColor" value={this.state.fgActiveColor} onChange={this.changeSetting}/></label></div>
+                <div><button onClick={this.toggleFullScreen}>Toggle Full Screen</button></div>
             </div>
         );
     }

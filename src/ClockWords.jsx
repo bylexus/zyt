@@ -72,6 +72,7 @@ class ClockWords extends React.Component {
                         let style = {
                             'flexGrow': 1,
                             'textAlign': 'center',
+                            'alignSelf': 'flex-end',
                             'fontSize': (100 / (words.length)) + 'vmin',
                             'lineHeight': (100 / (words.length)) + 'vmin',
                             'fontWeight': 'bold',
