@@ -5,10 +5,10 @@ export const settings = Object.assign({
     bgColor: '#000000',
     fgDimmedColor: '#333333',
     fgActiveColor: '#ffffff',
-    activeShadowX: '2',
-    activeShadowY: '2',
-    activeShadowBlur: '5',
-    activeShadowColor: '#ffffff',
+    activeShadowX: '0',
+    activeShadowY: '0',
+    activeShadowBlur: '9',
+    activeShadowColor: '#cccccc',
     dimmedShadowX: '0',
     dimmedShadowY: '0',
     dimmedShadowBlur: '0',
@@ -51,6 +51,9 @@ export class SettingsDlg extends React.Component {
                     <select value={this.state.lang} onChange={this.changeSetting} name="lang">
                         <option value="zueri">Züri-Düütsch</option>
                         <option value="bern">Bärn-Düütsch</option>
+                        <option value="deutsch_std">Standard-Deutsch</option>
+
+
                     </select>
                 </label></div>
                 <div><label><span>BG:</span> <input type="color" name="bgColor" value={this.state.bgColor} onChange={this.changeSetting} /></label></div>
