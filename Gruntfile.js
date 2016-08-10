@@ -4,6 +4,12 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        clean: {
+            build: {
+                src: ['build/']
+            }
+        },
+
         browserify: {
             options: {
                 transform: [
@@ -48,7 +54,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'www/',
-                    src: ['index.html','styles/**','resources/**'],
+                    src: ['styles/**','resources/**'],
                     dest: 'build/'
                 }]
             }
@@ -60,13 +66,21 @@ module.exports = function(grunt) {
             build: {
                 NODE_ENV: 'production'
             }
+        },
+
+        processhtml: {
+            web: {
+                files: {
+                    'build/index.html': ['www/index.html']
+                }
+            }
         }
 
     });
 
     // Default task(s).
     grunt.registerTask('default', ['env:dev','browserify:dev']);
-    grunt.registerTask('build:prod', ['env:build','browserify:prod','copy:build','uglify:prod']);
+    grunt.registerTask('build:web', ['clean:build','env:build','browserify:prod','copy:build','uglify:prod','processhtml:web']);
 
 };
 

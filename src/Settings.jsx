@@ -29,10 +29,8 @@ function storeSettings(obj) {
 function setScreenActive(value) {
     if (window.plugins && window.plugins.insomnia) {
         if (value === true) {
-            console.log("SCREEN ACTIVE");
             window.plugins.insomnia.keepAwake();
         } else {
-            console.log("SCREEN INACTIVE");
             window.plugins.insomnia.allowSleepAgain();
         }
     }
@@ -97,7 +95,7 @@ export class SettingsDlg extends React.Component {
                         <option value="english_std">English Standard</option>
                     </select>
                 </label></div>
-                <div><label><span>BG:</span>
+                <div><label><span>Background:</span>
                     <button style={colBtnStyle} data-for="bgColor" className="jscolor">{this.state.bgColor}</button>
                     <input type="hidden" id="bgColor" value={this.state.bgColor} /></label>
                 </div>
@@ -113,9 +111,9 @@ export class SettingsDlg extends React.Component {
                 <fieldset>
                     <legend>FG active shadow</legend>
                     <div>
-                        <label>dX: <input type="number"  id="activeShadowX" value={this.state.activeShadowX} onChange={this.changeSetting} style={{width: '30px'}}/></label>&nbsp;
-                        <label>dY: <input type="number"  id="activeShadowY" value={this.state.activeShadowY} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
-                        <label>blur: <input type="number"  id="activeShadowBlur" value={this.state.activeShadowBlur} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label>dX: <input type="number"  id="activeShadowX" value={this.state.activeShadowX} onChange={this.changeSetting} style={{width: '40px'}}/></label>&nbsp;
+                        <label>dY: <input type="number"  id="activeShadowY" value={this.state.activeShadowY} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
+                        <label>blur: <input type="number"  id="activeShadowBlur" value={this.state.activeShadowBlur} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
                         <button style={colBtnStyle} data-for="activeShadowColor" className="jscolor">{this.state.activeShadowColor}</button>
                         <input type="hidden" id="activeShadowColor" value={this.state.activeShadowColor}/>
                     </div>
@@ -123,9 +121,9 @@ export class SettingsDlg extends React.Component {
                 <fieldset>
                     <legend>FG dimmed shadow</legend>
                     <div>
-                        <label>dX: <input type="number"  id="dimmedShadowX" value={this.state.dimmedShadowX} onChange={this.changeSetting} style={{width: '30px'}}/></label>&nbsp;
-                        <label>dY: <input type="number"  id="dimmedShadowY" value={this.state.dimmedShadowY} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
-                        <label>blur: <input type="number"  id="dimmedShadowBlur" value={this.state.dimmedShadowBlur} onChange={this.changeSetting} style={{width: '30px'}} /></label>&nbsp;
+                        <label>dX: <input type="number"  id="dimmedShadowX" value={this.state.dimmedShadowX} onChange={this.changeSetting} style={{width: '40px'}}/></label>&nbsp;
+                        <label>dY: <input type="number"  id="dimmedShadowY" value={this.state.dimmedShadowY} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
+                        <label>blur: <input type="number"  id="dimmedShadowBlur" value={this.state.dimmedShadowBlur} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
                         <button style={colBtnStyle} data-for="dimmedShadowColor" className="jscolor">{this.state.dimmedShadowColor}</button>
                         <input type="hidden" id="dimmedShadowColor" value={this.state.dimmedShadowColor} />
                     </div>
