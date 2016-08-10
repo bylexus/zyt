@@ -18,8 +18,7 @@ class ClockWords extends React.Component {
 
     getContainerStyles() {
         return {
-            'fontFamily': '"Courier New",Courier,monospace',
-            'fontSize': '50px',
+            'fontFamily': this.context.settings.fontFamily || 'Montserrat',
             'display':'flex',
             'backgroundColor': this.context.settings.bgColor,
             'flexDirection': 'column',
@@ -69,7 +68,7 @@ class ClockWords extends React.Component {
             dimmedShadowBlur,
             dimmedShadowColor,
             fgActiveColor,
-            fgDimmedColor,
+            fgDimmedColor
         } = this.context.settings;
 
         let actualStyle = {
@@ -80,7 +79,7 @@ class ClockWords extends React.Component {
             'flexGrow': 1,
             'textAlign': 'center',
             'alignSelf': 'flex-end',
-            'fontSize': (100 / (words.length)) + 'vmin',
+            'fontSize': (100 / (words.length) * 0.95) + 'vmin',
             'lineHeight': (100 / (words.length)) + 'vmin',
             'fontWeight': 'bold',
             'color': fgDimmedColor,

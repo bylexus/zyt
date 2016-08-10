@@ -14,7 +14,8 @@ export const settings = Object.assign({
     dimmedShadowBlur: '0',
     dimmedShadowColor: '#000000',
     keepScreenActive: false,
-    lang: 'zueri'
+    lang: 'zueri',
+    fontFamily: 'Montserrat'
 }, JSON.parse(localStorage.getItem('as-clock')) || {});
 
 let settingsListener = null;
@@ -93,6 +94,12 @@ export class SettingsDlg extends React.Component {
                         <option value="bern">Bärn-Düütsch</option>
                         <option value="deutsch_std">Standard-Deutsch</option>
                         <option value="english_std">English Standard</option>
+                    </select>
+                </label>
+                <label>Font:
+                    <select value={this.state.fontFamily} onChange={this.changeSetting} id="fontFamily">
+                        <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Montserrat">Montserrat</option>
                     </select>
                 </label></div>
                 <div><label><span>Background:</span>
