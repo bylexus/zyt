@@ -65,12 +65,17 @@ button {
     padding: 5px;
     color: #ccc;
     box-shadow: 0 0 40px #000;
+    font-size: 10pt;
 }
 
 
 .settings-dialog label span {
     display: inline-block;
     width: 120px;
+}
+
+.settings-dialog a {
+    color: #ccc;
 }
 
 .settings-dialog fieldset {

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    'app.js': ['src/app.jsx']
+                    'www/app.js': ['src/app.jsx']
                 }
             },
             prod: {
@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
+                    cwd: 'www/',
                     src: ['index.html','styles/**','resources/**'],
                     dest: 'build/'
                 }]

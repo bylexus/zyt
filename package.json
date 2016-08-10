@@ -69,5 +69,8 @@
     "react-dom": "^15.1.0",
     "screenfull": "^3.0.0",
     "uglifyify": "^3.0.2"
+  },
+  "devDependencies": {
+    "cordova": "^6.3.0"
   }
 }

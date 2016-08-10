@@ -1,4 +1,5 @@
 import "babel-polyfill";
+import "./vendor/jscolor-2.0.4/jscolor";
 import React from 'react';
 import ReactDOM from 'react-dom';
 

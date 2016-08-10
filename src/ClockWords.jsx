@@ -18,7 +18,7 @@ class ClockWords extends React.Component {
 
     getContainerStyles() {
         return {
-            'fontFamily': '"Courier New",courier',
+            'fontFamily': '"Courier New",Courier,monospace',
             'fontSize': '50px',
             'display':'flex',
             'backgroundColor': this.context.settings.bgColor,
@@ -74,7 +74,7 @@ class ClockWords extends React.Component {
 
         let actualStyle = {
             color: fgActiveColor,
-            textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${hex2rgba(activeShadowColor,90)}`
+            textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${hex2rgba(activeShadowColor,100)}`
         };
         let dimmedStyle = {
             'flexGrow': 1,
