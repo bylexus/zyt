@@ -21,9 +21,10 @@ Features
   * Font family
 * Keep screen on if you want to use the clock as wall panel
 
-A screenshot:
+Some screens:
 
 ![First Screenshot](./2016-08-08-u07ny.png)
+![2nd Screenshot](./2016-08-10-9d9fa.png)
 
 Dev
 ---
@@ -41,7 +42,8 @@ Build App
 ---------
 
 * `npm install`
-* `grunt build:prod`
+* `grunt build:app`
+* `cordova prepare`
 * `ANDROID_HOME=/path/to/android/sdk cordova build android`
 * `cordova build ios`
 
