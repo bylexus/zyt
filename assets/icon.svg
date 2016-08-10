@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="icon.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3973">
+      <stop
+         style="stop-color:#ffff96;stop-opacity:1;"
+         offset="0"
+         id="stop3975" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3977" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       id="filter3788">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.0935406"
+         id="feGaussianBlur3790" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3936">
+      <feFlood
+         flood-opacity="0.8"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3938" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3940" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="2"
+         result="blur"
+         id="feGaussianBlur3942" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset3944" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3946" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3969">
+      <rect
+         y="274.50504"
+         x="81.428574"
+         height="152.85712"
+         width="152.85712"
+         id="rect3971"
+         style="fill:#ffff96;fill-opacity:1;stroke:none" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3973"
+       id="linearGradient3979"
+       x1="89.285713"
+       y1="290.2193"
+       x2="219.28569"
+       y2="409.86215"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3973"
+       id="linearGradient3995"
+       gradientUnits="userSpaceOnUse"
+       x1="89.285713"
+       y1="290.2193"
+       x2="219.28569"
+       y2="409.86215"
+       gradientTransform="translate(196.78571,0.3571429)" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3999">
+      <rect
+         ry="25.714285"
+         style="fill:url(#linearGradient4003);fill-opacity:1;stroke:none"
+         id="rect4001"
+         width="152.85712"
+         height="152.85712"
+         x="81.428551"
+         y="274.50504" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3973"
+       id="linearGradient4003"
+       gradientUnits="userSpaceOnUse"
+       x1="89.285713"
+       y1="290.2193"
+       x2="219.28569"
+       y2="409.86215" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="296.95768"
+     inkscape:cy="705.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient3979);fill-opacity:1;stroke:none"
+       id="rect2985"
+       width="152.85712"
+       height="152.85712"
+       x="81.428574"
+       y="274.50504" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cfcfcf;fill-opacity:1;stroke:none;font-family:Fira Sans;-inkscape-font-specification:Sans Bold;filter:url(#filter3788)"
+       x="57.85714"
+       y="313.79077"
+       id="text2987"
+       sodipodi:linespacing="125%"
+       clip-path="url(#clipPath3969)"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="57.85714"
+         y="313.79077"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold;fill:#cfcfcf;fill-opacity:1">FPRTMARDMKCL</tspan><tspan
+         sodipodi:role="line"
+         x="57.85714"
+         y="363.79077"
+         id="tspan2991"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold;fill:#cfcfcf;fill-opacity:1">IAP   CHZSTQ</tspan><tspan
+         sodipodi:role="line"
+         x="57.85714"
+         y="413.79077"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold;fill:#cfcfcf;fill-opacity:1"
+         id="tspan3008">YMNHGRLPOART</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2995"
+       y="370.33759"
+       x="106.77901"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Fira Sans;-inkscape-font-specification:Sans Bold;filter:url(#filter3936)"
+       xml:space="preserve"><tspan
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         id="tspan3001"
+         y="370.33759"
+         x="106.77901"
+         sodipodi:role="line">ZYT</tspan></text>
+    <rect
+       y="274.86218"
+       x="278.21426"
+       height="152.85712"
+       width="152.85712"
+       id="rect3981"
+       style="fill:url(#linearGradient3995);fill-opacity:1;stroke:none"
+       ry="25.714285"
+       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-512.png"
+       inkscape:export-xdpi="250.82001"
+       inkscape:export-ydpi="250.82001" />
+    <text
+       clip-path="url(#clipPath3999)"
+       sodipodi:linespacing="125%"
+       id="text3983"
+       y="313.79077"
+       x="57.85714"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cfcfcf;fill-opacity:1;stroke:none;filter:url(#filter3788);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
+       xml:space="preserve"
+       transform="translate(196.78571,0.3571429)"
+       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-512.png"
+       inkscape:export-xdpi="250.82001"
+       inkscape:export-ydpi="250.82001"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         y="313.79077"
+         x="57.85714"
+         id="tspan3985"
+         sodipodi:role="line">FPRTMARDMKCL</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         id="tspan3987"
+         y="363.79077"
+         x="57.85714"
+         sodipodi:role="line">IAP   CHZSTQ</tspan><tspan
+         id="tspan3989"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         y="413.79077"
+         x="57.85714"
+         sodipodi:role="line">YMNHGRLPOART</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;filter:url(#filter3936);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
+       x="303.5647"
+       y="370.69473"
+       id="text3991"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-512.png"
+       inkscape:export-xdpi="250.82001"
+       inkscape:export-ydpi="250.82001"><tspan
+         sodipodi:role="line"
+         x="303.5647"
+         y="370.69473"
+         id="tspan3993"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold">ZYT</tspan></text>
+  </g>
+</svg>

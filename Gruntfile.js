@@ -30,6 +30,16 @@ module.exports = function(grunt) {
                     'www/app.js': ['src/app.jsx']
                 }
             },
+            app: {
+                options: {
+                    browserifyOptions: {
+                        debug: false
+                    }
+                },
+                files: {
+                    'www/app.js': ['src/app.jsx']
+                }
+            },
             prod: {
                 options: {
                     browserifyOptions: {
@@ -43,6 +53,11 @@ module.exports = function(grunt) {
         },
 
         uglify: {
+            app: {
+                files: {
+                    'www/app.js': 'www/app.js'
+                }
+            },
             prod: {
                 files: {
                     'build/app.js': 'build/app.js'
@@ -80,6 +95,7 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['env:dev','browserify:dev']);
+    grunt.registerTask('build:app', ['env:build','browserify:app','uglify:app']);
     grunt.registerTask('build:web', ['clean:build','env:build','browserify:prod','copy:build','uglify:prod','processhtml:web']);
 
 };

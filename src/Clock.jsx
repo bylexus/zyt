@@ -10,6 +10,7 @@ class Clock extends React.Component {
     }
 
     now() {
+        // return new Date('2016-01-01 08:35');
         return new Date();
     }
 

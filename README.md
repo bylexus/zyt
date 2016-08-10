@@ -15,6 +15,11 @@ Features
   * Bern-Düütsch - a Swiss German dialect around Bern
   * Standard-Deutsch - German as learned in school
   * Standard English - English as learned in school
+* Style the clock as you want:
+  * Background color
+  * Dimmed and active Foreground text color and shadow
+  * Font family
+* Keep screen on if you want to use the clock as wall panel
 
 A screenshot:
 
