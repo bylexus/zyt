@@ -4,7 +4,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Clock from './Clock.jsx';
-import Settings, {SettingsDlg} from './Settings.jsx';
+import Settings, {SettingsDlg,setScreenActive,setCurrentScreenActivationMode} from './Settings.jsx';
+
+
+// register native device events
+document.addEventListener('deviceready', () => {
+    document.addEventListener('pause', () => {
+        setScreenActive(false);
+    });
+
+    document.addEventListener('resume',() => {
+        setCurrentScreenActivationMode();
+    });
+
+    // Set initial screen activation mode:
+    setCurrentScreenActivationMode();
+});
 
 class App extends React.Component {
     constructor(props) {

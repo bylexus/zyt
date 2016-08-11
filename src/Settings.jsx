@@ -28,7 +28,7 @@ function storeSettings(obj) {
     }
 }
 
-function setScreenActive(value) {
+export function setScreenActive(value) {
     if (window.plugins && window.plugins.insomnia) {
         if (value === true) {
             window.plugins.insomnia.keepAwake();
@@ -37,8 +37,10 @@ function setScreenActive(value) {
         }
     }
 }
-// Initial screen activation:
-setScreenActive(settings.keepScreenActive);
+
+export function setCurrentScreenActivationMode() {
+    setScreenActive(settings.keepScreenActive);
+}
 
 
 export class SettingsDlg extends React.Component {
