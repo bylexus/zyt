@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="101" id="ch.alexi.zyt" ios-CFBundleVersion="101" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="102" id="ch.alexi.zyt" ios-CFBundleVersion="102" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Zyt</name>
     <description>
         A "talking" Clock - Shows the actual time as spoken in words
@@ -18,55 +18,37 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <!--
-            ldpi    : 36x36 px
-            mdpi    : 48x48 px
-            hdpi    : 72x72 px
-            xhdpi   : 96x96 px
-            xxhdpi  : 144x144 px
-            xxxhdpi : 192x192 px
-        -->
-        <icon src="assets/android-icons/icon-android-36.png" density="ldpi" />
-        <icon src="assets/android-icons/icon-android-48.png" density="mdpi" />
-        <icon src="assets/android-icons/icon-android-72.png" density="hdpi" />
-        <icon src="assets/android-icons/icon-android-96.png" density="xhdpi" />
-        <icon src="assets/android-icons/icon-android-144.png" density="xxhdpi" />
-        <icon src="assets/android-icons/icon-android-192.png" density="xxxhdpi" />
+        <icon density="ldpi" src="assets/android-icons/icon-android-36.png" />
+        <icon density="mdpi" src="assets/android-icons/icon-android-48.png" />
+        <icon density="hdpi" src="assets/android-icons/icon-android-72.png" />
+        <icon density="xhdpi" src="assets/android-icons/icon-android-96.png" />
+        <icon density="xxhdpi" src="assets/android-icons/icon-android-144.png" />
+        <icon density="xxxhdpi" src="assets/android-icons/icon-android-192.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="Orientation" value="all" />
-        <!-- iOS 8.0+ -->
-        <!-- iPhone 6 Plus  -->
-        <icon src="assets/ios-icons/icon-ios-180.png" width="180" height="180" />
-        <!-- iOS 7.0+ -->
-        <!-- iPhone / iPod Touch  -->
-        <icon src="assets/ios-icons/icon-ios-60.png" width="60" height="60" />
-        <icon src="assets/ios-icons/icon-ios-120.png" width="120" height="120" />
-        <!-- iPad -->
-        <icon src="assets/ios-icons/icon-ios-76.png" width="76" height="76" />
-        <icon src="assets/ios-icons/icon-ios-152.png" width="152" height="152" />
-        <!-- iOS 6.1 -->
-        <!-- Spotlight Icon -->
-        <icon src="assets/ios-icons/icon-ios-40.png" width="40" height="40" />
-        <icon src="assets/ios-icons/icon-ios-80.png" width="80" height="80" />
-        <!-- iPhone / iPod Touch -->
-        <icon src="assets/ios-icons/icon-ios-57.png" width="57" height="57" />
-        <icon src="assets/ios-icons/icon-ios-114.png" width="114" height="114" />
-        <!-- iPad -->
-        <icon src="assets/ios-icons/icon-ios-72.png" width="72" height="72" />
-        <icon src="assets/ios-icons/icon-ios-144.png" width="144" height="144" />
-        <!-- iPhone Spotlight and Settings Icon -->
-        <icon src="assets/ios-icons/icon-ios-29.png" width="29" height="29" />
-        <icon src="assets/ios-icons/icon-ios-58.png" width="58" height="58" />
-        <!-- iPad Spotlight and Settings Icon -->
-        <icon src="assets/ios-icons/icon-ios-50.png" width="50" height="50" />
-        <icon src="assets/ios-icons/icon-ios-100.png" width="100" height="100" />
+        <icon height="180" src="assets/ios-icons/icon-ios-180.png" width="180" />
+        <icon height="60" src="assets/ios-icons/icon-ios-60.png" width="60" />
+        <icon height="120" src="assets/ios-icons/icon-ios-120.png" width="120" />
+        <icon height="76" src="assets/ios-icons/icon-ios-76.png" width="76" />
+        <icon height="152" src="assets/ios-icons/icon-ios-152.png" width="152" />
+        <icon height="40" src="assets/ios-icons/icon-ios-40.png" width="40" />
+        <icon height="80" src="assets/ios-icons/icon-ios-80.png" width="80" />
+        <icon height="57" src="assets/ios-icons/icon-ios-57.png" width="57" />
+        <icon height="114" src="assets/ios-icons/icon-ios-114.png" width="114" />
+        <icon height="72" src="assets/ios-icons/icon-ios-72.png" width="72" />
+        <icon height="144" src="assets/ios-icons/icon-ios-144.png" width="144" />
+        <icon height="29" src="assets/ios-icons/icon-ios-29.png" width="29" />
+        <icon height="58" src="assets/ios-icons/icon-ios-58.png" width="58" />
+        <icon height="50" src="assets/ios-icons/icon-ios-50.png" width="50" />
+        <icon height="100" src="assets/ios-icons/icon-ios-100.png" width="100" />
     </platform>
     <engine name="android" spec="~5.2.1" />
     <plugin name="cordova-plugin-insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0" />
+    <plugin name="cordova-plugin-globalization" spec="~1.0.3" />
 </widget>

@@ -1,5 +1,6 @@
 import React from 'react';
 import screenfull from 'screenfull';
+import tr from './i18n';
 
 export const settings = Object.assign({
     bgColor: '#000000',
@@ -103,7 +104,7 @@ export class SettingsDlg extends React.Component {
         let colBtnStyle = {width: 90};
         return (
             <div className="settings-dialog container">
-                <div><label><span>Lang:</span>
+                <div><label><span>{tr('LANG')}:</span>
                     <select value={this.state.lang} onChange={this.changeSetting} id="lang">
                         <option value="zueri">Züri-Düütsch</option>
                         <option value="bern">Bärn-Düütsch</option>
@@ -114,7 +115,7 @@ export class SettingsDlg extends React.Component {
                 </div>
 
                 <div>
-                    <label><span>Font:</span>
+                    <label><span>{tr('FONT')}:</span>
                     <select value={this.state.fontFamily} onChange={this.changeSetting} id="fontFamily">
                         <option value="Bree Serif">Bree Serif</option>
                         <option value="Libre Baskerville">Libre Baskerville</option>
@@ -126,30 +127,30 @@ export class SettingsDlg extends React.Component {
                 </label></div>
 
                 <div>
-                    <label><span>Uppercase</span> <input type="checkbox" id="upperCase" checked={this.state.upperCase} onChange={this.changeCheckboxSetting} /></label>
+                    <label><span>{tr('UPPERCASE')}</span> <input type="checkbox" id="upperCase" checked={this.state.upperCase} onChange={this.changeCheckboxSetting} /></label>
                 </div>
 
                 <div>
-                    <button style={colBtnStyle} data-for="bgColor" className="jscolor">Background</button>&nbsp;
-                    <button style={colBtnStyle} data-for="fgActiveColor" className="jscolor">FG Active</button>&nbsp;
-                    <button style={colBtnStyle} data-for="fgDimmedColor" className="jscolor">FG Dimmed</button>&nbsp;
+                    <button style={colBtnStyle} data-for="bgColor" className="jscolor">{tr('BACKGROUND')}</button>&nbsp;
+                    <button style={colBtnStyle} data-for="fgActiveColor" className="jscolor">{tr('FG_ACTIVE')}</button>&nbsp;
+                    <button style={colBtnStyle} data-for="fgDimmedColor" className="jscolor">{tr('FG_DIMMED')}</button>&nbsp;
                     <input type="hidden" id="bgColor" value={this.state.bgColor} />
                     <input type="hidden" id="fgActiveColor" value={this.state.fgActiveColor}/>
                     <input type="hidden" id="fgDimmedColor" value={this.state.fgDimmedColor} />
                 </div>
 
                 <fieldset>
-                    <legend>FG active shadow</legend>
+                    <legend>{tr('FG_ACTIVE_SHADOW')}</legend>
                     <div>
                         <label>dX: <input type="number"  id="activeShadowX" value={this.state.activeShadowX} onChange={this.changeSetting} style={{width: '40px'}}/></label>&nbsp;
                         <label>dY: <input type="number"  id="activeShadowY" value={this.state.activeShadowY} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
-                        <label>blur: <input type="number"  id="activeShadowBlur" value={this.state.activeShadowBlur} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
+                        <label>{tr('BLUR')}: <input type="number"  id="activeShadowBlur" value={this.state.activeShadowBlur} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
                         <button style={colBtnStyle} data-for="activeShadowColor" data-position="left" className="jscolor">{this.state.activeShadowColor}</button>
                         <input type="hidden" id="activeShadowColor" value={this.state.activeShadowColor}/>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>FG dimmed shadow</legend>
+                    <legend>{tr('FG_DIMMED_SHADOW')}</legend>
                     <div>
                         <label>dX: <input type="number"  id="dimmedShadowX" value={this.state.dimmedShadowX} onChange={this.changeSetting} style={{width: '40px'}}/></label>&nbsp;
                         <label>dY: <input type="number"  id="dimmedShadowY" value={this.state.dimmedShadowY} onChange={this.changeSetting} style={{width: '40px'}} /></label>&nbsp;
@@ -159,7 +160,7 @@ export class SettingsDlg extends React.Component {
                     </div>
                 </fieldset>
                 <div>
-                    {!window.cordova && <button onClick={this.toggleFullScreen}>Toggle Full Screen</button>}
+                    {!window.cordova && <button onClick={this.toggleFullScreen}>{tr('TOGGLE_FULLSCREEN')}</button>}
 
                     {window.plugins && window.plugins.insomnia && (
                         <label><span>Keep screen on:</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label>
@@ -169,7 +170,7 @@ export class SettingsDlg extends React.Component {
                         e.preventDefault();
                         window.open('https://github.com/bylexus/talking-clock','alexich_github');
                         return false;
-                    }}>info on github</button>
+                    }}>{tr('INFO_ON_GITHUB')}</button>
                 </div>
             </div>
         );
