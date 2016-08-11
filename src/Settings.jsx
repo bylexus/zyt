@@ -101,7 +101,7 @@ export class SettingsDlg extends React.Component {
     }
 
     render() {
-        let colBtnStyle = {width: 90};
+        let colBtnStyle = {width: 100};
         return (
             <div className="settings-dialog container">
                 <div><label><span>{tr('LANG')}:</span>

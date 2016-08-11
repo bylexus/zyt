@@ -118,8 +118,8 @@ button {
 select {
     border: 1px solid #ccc;
     padding: 8px;
-    background-color: #3A4A5A;
-    color: #ccc;
+    background-color: white;
+    color: #333;
     border-radius: 10px;
     width: 200px;
     margin-bottom: 2px;
