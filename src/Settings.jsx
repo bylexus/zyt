@@ -163,7 +163,7 @@ export class SettingsDlg extends React.Component {
                     {!window.cordova && <button onClick={this.toggleFullScreen}>{tr('TOGGLE_FULLSCREEN')}</button>}
 
                     {window.plugins && window.plugins.insomnia && (
-                        <label><span>Keep screen on:</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label>
+                        <label><span>{tr('KEEP_SCREEN_ON')}</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label>
                     )}
 
                     <button style={{float: 'right'}} onClick={(e) => {

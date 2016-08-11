@@ -7,6 +7,7 @@ export default {
     'FG_DIMMED_SHADOW': 'VG-Schatten gedimmt',
     'FONT': 'Schrift',
     'INFO_ON_GITHUB':'info auf github',
+    'KEEP_SCREEN_ON': 'Bildschirm aktiv lassen',
     'LANG': 'Sprache',
     'TOGGLE_FULLSCREEN': 'Vollbild ein/aus',
     'UPPERCASE': 'Grossbuchstaben'

@@ -173,6 +173,48 @@
        y1="290.2193"
        x2="219.28569"
        y2="409.86215" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3933">
+      <feFlood
+         flood-opacity="0.6"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3935" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3937" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur3939" />
+      <feOffset
+         dx="0"
+         dy="2"
+         result="offset"
+         id="feOffset3941" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3943" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3973"
+       id="linearGradient3955"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(196.78571,0.3571429)"
+       x1="89.285713"
+       y1="290.2193"
+       x2="219.28569"
+       y2="409.86215" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -182,7 +224,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="172.70242"
+     inkscape:cx="202.97397"
      inkscape:cy="760.33348"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -200,7 +242,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -208,14 +250,6 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#ff0000;stroke:none"
-       id="rect3045"
-       width="183.42841"
-       height="183.42841"
-       x="262.92862"
-       y="259.57654"
-       ry="0" />
     <rect
        style="fill:url(#linearGradient3979);fill-opacity:1;stroke:none"
        id="rect2985"
@@ -267,58 +301,73 @@
          y="370.33759"
          x="106.77901"
          sodipodi:role="line">ZYT</tspan></text>
-    <rect
-       y="274.86218"
-       x="278.21426"
-       height="152.85712"
-       width="152.85712"
-       id="rect3981"
-       style="fill:url(#linearGradient3995);fill-opacity:1;stroke:none"
-       ry="76.428558"
-       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
-       inkscape:export-xdpi="555.70001"
-       inkscape:export-ydpi="555.70001" />
-    <text
-       clip-path="url(#clipPath3039)"
-       sodipodi:linespacing="125%"
-       id="text3983"
-       y="313.79077"
-       x="57.85714"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cfcfcf;fill-opacity:1;stroke:none;filter:url(#filter4013);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
-       xml:space="preserve"
-       transform="translate(196.78571,0.3571429)"
-       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
-       inkscape:export-xdpi="555.70001"
-       inkscape:export-ydpi="555.70001"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+    <g
+       id="g3945"
+       transform="translate(-1.0714287,-10.357142)"
+       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-512.png"
+       inkscape:export-xdpi="251.21001"
+       inkscape:export-ydpi="251.21001">
+      <rect
+         ry="0"
+         y="259.57654"
+         x="262.92862"
+         height="183.42841"
+         width="183.42841"
+         id="rect3045"
+         style="fill:none;stroke:none" />
+      <rect
+         inkscape:export-ydpi="555.70001"
+         inkscape:export-xdpi="555.70001"
+         inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
+         ry="76.428558"
+         style="fill:url(#linearGradient3955);fill-opacity:1;stroke:none;filter:url(#filter3933)"
+         id="rect3981"
+         width="152.85712"
+         height="152.85712"
+         x="278.21426"
+         y="274.86218" />
+      <text
+         inkscape:export-ydpi="555.70001"
+         inkscape:export-xdpi="555.70001"
+         inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
+         transform="translate(196.78571,0.3571429)"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cfcfcf;fill-opacity:1;stroke:none;filter:url(#filter4013);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
+         x="57.85714"
          y="313.79077"
-         x="57.85714"
-         id="tspan3985"
-         sodipodi:role="line">EINSZWEIMKCL</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
-         id="tspan3987"
-         y="363.79077"
-         x="57.85714"
-         sodipodi:role="line">I     CHZSTQ</tspan><tspan
-         id="tspan3989"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
-         y="413.79077"
-         x="57.85714"
-         sodipodi:role="line">VIERFÜNFOART</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2f2f;fill-opacity:1;stroke:none;filter:url(#filter3936);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
-       x="303.5647"
-       y="370.69473"
-       id="text3991"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
-       inkscape:export-xdpi="555.70001"
-       inkscape:export-ydpi="555.70001"><tspan
-         sodipodi:role="line"
-         x="303.5647"
+         id="text3983"
+         sodipodi:linespacing="125%"
+         clip-path="url(#clipPath3039)"><tspan
+           sodipodi:role="line"
+           id="tspan3985"
+           x="57.85714"
+           y="313.79077"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold">EINSZWEIMKCL</tspan><tspan
+           sodipodi:role="line"
+           x="57.85714"
+           y="363.79077"
+           id="tspan3987"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold">I     CHZSTQ</tspan><tspan
+           sodipodi:role="line"
+           x="57.85714"
+           y="413.79077"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#cfcfcf;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+           id="tspan3989">VIERFÜNFOART</tspan></text>
+      <text
+         inkscape:export-ydpi="555.70001"
+         inkscape:export-xdpi="555.70001"
+         inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
+         sodipodi:linespacing="125%"
+         id="text3991"
          y="370.69473"
-         id="tspan3993"
-         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff2f2f;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold">ZYT</tspan></text>
+         x="303.5647"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2f2f;fill-opacity:1;stroke:none;filter:url(#filter3936);font-family:Fira Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff2f2f;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+           id="tspan3993"
+           y="370.69473"
+           x="303.5647"
+           sodipodi:role="line">ZYT</tspan></text>
+    </g>
   </g>
 </svg>
