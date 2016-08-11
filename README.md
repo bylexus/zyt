@@ -53,6 +53,9 @@ Build icons
 -----------
 ios:
 `$ for size in 180 60 120 76 152 40 80 57 114 72 144 29 58 50 100; do convert icon-ios-1024.png -resize ${size} ios-icons/icon-ios-${size}.png; done`
+Splash screens:
+`$ for size in 320x480 640x960 768x1024 1536x2048 1024x768 2048x1536 640x1136 750x1334 1242x2208 2208x1242; do convert ios-icons/splash.png -resize ${size}\! ios-icons/splash-${size}.png;done`
+
 
 android:
 `$ for size in 36 48 72 96 144 192; do convert icon-512.png -resize ${size} android-icons/icon-andoid-${size}.png; done`
