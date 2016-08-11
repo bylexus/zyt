@@ -41,7 +41,19 @@ button {
     background-color: #3A4A5A;
     color: #ccc;
     border-radius: 10px;
+    margin-bottom: 2px;
 }
+
+select {
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: #3A4A5A;
+    color: #ccc;
+    border-radius: 10px;
+    width: 200px;
+    margin-bottom: 2px;
+}
+
 
 
 .pulse {
@@ -72,8 +84,9 @@ button {
     bottom: 0;
     right: 0;
     margin: auto;
-    width: 390px;
-    height: 320px;
+    max-width: 355px;
+    max-height: 355px;
+    overflow: auto;
     background-color: #345;
     border: 1px solid #888;
     border-radius: 10px;

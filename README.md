@@ -48,3 +48,7 @@ Build App
 * `cordova build ios`
 
 
+Build icons
+-----------
+ios:
+for size in 180 60 120 76 152 40 80 57 114 72 144 29 58 50 100; do convert icon-ios-1024.png -resize ${size} ios-icons/icon-ios-${size}.png; done
