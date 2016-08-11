@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="100" id="ch.alexi.zyt" ios-CFBundleVersion="100" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="101" id="ch.alexi.zyt" ios-CFBundleVersion="101" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Zyt</name>
     <description>
         A "talking" Clock - Shows the actual time as spoken in words
@@ -18,7 +18,20 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon src="assets/icon-512.png" />
+        <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="assets/android-icons/icon-android-36.png" density="ldpi" />
+        <icon src="assets/android-icons/icon-android-48.png" density="mdpi" />
+        <icon src="assets/android-icons/icon-android-72.png" density="hdpi" />
+        <icon src="assets/android-icons/icon-android-96.png" density="xhdpi" />
+        <icon src="assets/android-icons/icon-android-144.png" density="xxhdpi" />
+        <icon src="assets/android-icons/icon-android-192.png" density="xxxhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

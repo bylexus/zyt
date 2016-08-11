@@ -26,7 +26,7 @@ class Clock extends React.Component {
 
     render() {
         return (
-        <ClockWords {...this.props} date={this.state.date} lang={this.context.settings.lang}/>
+        <ClockWords {...this.props} date={this.state.date} settings={this.context.settings} />
         );
     }
 }

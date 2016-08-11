@@ -1,15 +1,86 @@
 @font-face {
   font-family: 'Roboto Mono';
-  font-style: normal;
   font-weight: 400;
-  src: url(../resources/fonts/Roboto_Mono/RobotoMono-Regular.ttf);
+  font-style: normal;
+  src: url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.eot');
+  src: url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.eot?#iefix') format('embedded-opentype'),
+       local('Roboto Mono'),
+       local('Roboto-Mono-regular'),
+       url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.woff2') format('woff2'),
+       url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.woff') format('woff'),
+       url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.ttf') format('truetype'),
+       url('../resources/fonts/Roboto-Mono/Roboto-Mono-regular.svg#RobotoMono') format('svg');
 }
+
 
 @font-face {
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 400;
-  src: url(../resources/fonts/Montserrat/Montserrat-Regular.ttf);
+  font-style: normal;
+  src: url('../resources/fonts/Montserrat/Montserrat-regular.eot');
+  src: url('../resources/fonts/Montserrat/Montserrat-regular.eot?#iefix') format('embedded-opentype'),
+       local('Montserrat-Regular'),
+       local('Montserrat-regular'),
+       url('../resources/fonts/Montserrat/Montserrat-regular.woff2') format('woff2'),
+       url('../resources/fonts/Montserrat/Montserrat-regular.woff') format('woff'),
+       url('../resources/fonts/Montserrat/Montserrat-regular.ttf') format('truetype'),
+       url('../resources/fonts/Montserrat/Montserrat-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Bree Serif';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Bree-Serif/Bree-Serif-regular.eot');
+  src: url('../resources/fonts/Bree-Serif/Bree-Serif-regular.eot?#iefix') format('embedded-opentype'),
+       local('Bree Serif'),
+       local('Bree-Serif-regular'),
+       url('../resources/fonts/Bree-Serif/Bree-Serif-regular.woff2') format('woff2'),
+       url('../resources/fonts/Bree-Serif/Bree-Serif-regular.woff') format('woff'),
+       url('../resources/fonts/Bree-Serif/Bree-Serif-regular.ttf') format('truetype'),
+       url('../resources/fonts/Bree-Serif/Bree-Serif-regular.svg#BreeSerif') format('svg');
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.eot');
+  src: url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.eot?#iefix') format('embedded-opentype'),
+       local('Libre Baskerville'),
+       local('Libre-Baskerville-regular'),
+       url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.woff2') format('woff2'),
+       url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.woff') format('woff'),
+       url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.ttf') format('truetype'),
+       url('../resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.svg#LibreBaskerville') format('svg');
+}
+
+@font-face {
+  font-family: 'Ultra';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Ultra/Ultra-regular.eot');
+  src: url('../resources/fonts/Ultra/Ultra-regular.eot?#iefix') format('embedded-opentype'),
+       local('Ultra'),
+       local('Ultra-regular'),
+       url('../resources/fonts/Ultra/Ultra-regular.woff2') format('woff2'),
+       url('../resources/fonts/Ultra/Ultra-regular.woff') format('woff'),
+       url('../resources/fonts/Ultra/Ultra-regular.ttf') format('truetype'),
+       url('../resources/fonts/Ultra/Ultra-regular.svg#Ultra') format('svg');
+}
+
+@font-face {
+  font-family: 'Monoton';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Monoton/Monoton-regular.eot');
+  src: url('../resources/fonts/Monoton/Monoton-regular.eot?#iefix') format('embedded-opentype'),
+       local('Monoton'),
+       local('Monoton-regular'),
+       url('../resources/fonts/Monoton/Monoton-regular.woff2') format('woff2'),
+       url('../resources/fonts/Monoton/Monoton-regular.woff') format('woff'),
+       url('../resources/fonts/Monoton/Monoton-regular.ttf') format('truetype'),
+       url('../resources/fonts/Monoton/Monoton-regular.svg#Monoton') format('svg');
 }
 
 
@@ -100,10 +171,19 @@ select {
 .settings-dialog label span {
     display: inline-block;
     width: 120px;
+
+    line-height: 20px;
+    vertical-align: top;
 }
 
 .settings-dialog a {
     color: #ccc;
+}
+
+.settings-dialog input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
 }
 
 .settings-dialog fieldset {

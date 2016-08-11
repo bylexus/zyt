@@ -149,6 +149,30 @@
        y2="351.29074"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(0,4.2167969e-6)" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3039">
+      <rect
+         inkscape:export-ydpi="555.70001"
+         inkscape:export-xdpi="555.70001"
+         inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
+         ry="76.428558"
+         style="fill:url(#linearGradient3043);fill-opacity:1;stroke:none"
+         id="rect3041"
+         width="152.85712"
+         height="152.85712"
+         x="81.428551"
+         y="274.50504" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3973"
+       id="linearGradient3043"
+       gradientUnits="userSpaceOnUse"
+       x1="89.285713"
+       y1="290.2193"
+       x2="219.28569"
+       y2="409.86215" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -158,7 +182,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="218.23813"
+     inkscape:cx="172.70242"
      inkscape:cy="760.33348"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -176,7 +200,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -184,6 +208,14 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect3045"
+       width="183.42841"
+       height="183.42841"
+       x="262.92862"
+       y="259.57654"
+       ry="0" />
     <rect
        style="fill:url(#linearGradient3979);fill-opacity:1;stroke:none"
        id="rect2985"
@@ -241,13 +273,13 @@
        height="152.85712"
        width="152.85712"
        id="rect3981"
-       style="fill:url(#linearGradient3995);fill-opacity:1;stroke:none;stroke-opacity:1;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:miter;stroke-linecap:butt"
-       ry="25.714285"
+       style="fill:url(#linearGradient3995);fill-opacity:1;stroke:none"
+       ry="76.428558"
        inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
        inkscape:export-xdpi="555.70001"
        inkscape:export-ydpi="555.70001" />
     <text
-       clip-path="url(#clipPath3999)"
+       clip-path="url(#clipPath3039)"
        sodipodi:linespacing="125%"
        id="text3983"
        y="313.79077"
@@ -288,16 +320,5 @@
          y="370.69473"
          id="tspan3993"
          style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff2f2f;fill-opacity:1;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold">ZYT</tspan></text>
-    <rect
-       inkscape:export-ydpi="555.70001"
-       inkscape:export-xdpi="555.70001"
-       inkscape:export-filename="/Users/alex/dev/zyt/assets/icon-ios-1024.png"
-       ry="33.928581"
-       style="fill:none;stroke:url(#linearGradient3804);stroke-width:13;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect3796"
-       width="152.85712"
-       height="152.85712"
-       x="278.21426"
-       y="274.86218" />
   </g>
 </svg>

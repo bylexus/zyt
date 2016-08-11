@@ -36,7 +36,8 @@ Build Web
 ---------
 
 * `npm install`
-* `grunt build:prod`
+* `grunt build:web`
+* Output goes to `build/` folder
 
 Build App
 ---------
@@ -51,4 +52,19 @@ Build App
 Build icons
 -----------
 ios:
-for size in 180 60 120 76 152 40 80 57 114 72 144 29 58 50 100; do convert icon-ios-1024.png -resize ${size} ios-icons/icon-ios-${size}.png; done
+`$ for size in 180 60 120 76 152 40 80 57 114 72 144 29 58 50 100; do convert icon-ios-1024.png -resize ${size} ios-icons/icon-ios-${size}.png; done`
+
+android:
+`$ for size in 36 48 72 96 144 192; do convert icon-512.png -resize ${size} android-icons/icon-andoid-${size}.png; done`
+
+Font download
+-------------
+
+All fonts are from Google Fonts. To make Web Font download easier, I used this site:
+
+http://www.localfont.com/
+
+Used libraries
+--------------
+
+The color picker used is jscolor: http://jscolor.com/

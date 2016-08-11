@@ -1,15 +1,15 @@
 const words = [
     // 12 chars per line
-    ['ES','K','IST','A','FÜNF','P'],
-    ['ZEHN','K','VIERTEL'],
-    ['ZWANZIG','MK','VOR'],
-    ['L','NACH','M','HALB','KB'],
-    ['EINS','ZWEI','DREI'],
-    ['VIER','PM','FÜNF','TA'],
-    ['SECHS','P','SIEBEN'],
-    ['ACHT','RU','NEUN','LW'],
-    ['ZEHN','PMA','ELF','LW'],
-    ['TAZ','ZWÖLF','PAT','.']
+    ['Es','k','ist','a','fünf','p'],
+    ['zehn','k','viertel'],
+    ['zwanzig','mk','vor'],
+    ['l','nach','m','halb','kb'],
+    ['eins','zwei','drei'],
+    ['vier','pm','fünf','ta'],
+    ['sechs','p','sieben'],
+    ['acht','ru','neun','lw'],
+    ['zehn','pma','elf','lw'],
+    ['taz','zwölf','pat','.']
 ];
 
 const times = {
@@ -22,7 +22,7 @@ const times = {
         15: [[1,2],[3,1]],
         20: [[2,0],[3,1]],
         25: [[0,4],[2,2],[3,3]],
-        30: [[3,2]],
+        30: [[3,3]],
         35: [[0,4],[3,1],[3,3]],
         40: [[2,0],[2,2]],
         45: [[1,2],[2,2]],

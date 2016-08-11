@@ -15,7 +15,8 @@ export const settings = Object.assign({
     dimmedShadowColor: '#000000',
     keepScreenActive: false,
     lang: 'zueri',
-    fontFamily: 'Montserrat'
+    fontFamily: 'Montserrat',
+    upperCase: true
 }, JSON.parse(localStorage.getItem('as-clock')) || {});
 
 let settingsListener = null;
@@ -46,6 +47,7 @@ export class SettingsDlg extends React.Component {
         this.state = settings;
         this.changeSetting = this.changeSetting.bind(this);
         this.changeScreenOnSetting = this.changeScreenOnSetting.bind(this);
+        this.changeCheckboxSetting = this.changeCheckboxSetting.bind(this);
     }
 
     changeSetting(e) {
@@ -54,9 +56,15 @@ export class SettingsDlg extends React.Component {
         });
     }
 
-    changeScreenOnSetting(e) {
-        let newVal = !this.state.keepScreenActive;
+    changeCheckboxSetting(e) {
+        let newVal = !this.state[e.target.id];
         this.changeSetting({target: {id: e.target.id,value: newVal }});
+        return newVal;
+
+    }
+
+    changeScreenOnSetting(e) {
+        let newVal = this.changeCheckboxSetting(e);
         setScreenActive(newVal);
     }
 
@@ -102,13 +110,23 @@ export class SettingsDlg extends React.Component {
                     </select>
                 </label>
                 </div>
+
                 <div>
                     <label><span>Font:</span>
                     <select value={this.state.fontFamily} onChange={this.changeSetting} id="fontFamily">
-                        <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Bree Serif">Bree Serif</option>
+                        <option value="Libre Baskerville">Libre Baskerville</option>
+                        <option value="Monoton">Monoton</option>
                         <option value="Montserrat">Montserrat</option>
+                        <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Ultra">Ultra</option>
                     </select>
                 </label></div>
+
+                <div>
+                    <label><span>Uppercase</span> <input type="checkbox" id="upperCase" checked={this.state.upperCase} onChange={this.changeCheckboxSetting} /></label>
+                </div>
+
                 <div>
                     <button style={colBtnStyle} data-for="bgColor" className="jscolor">Background</button>&nbsp;
                     <button style={colBtnStyle} data-for="fgActiveColor" className="jscolor">FG Active</button>&nbsp;

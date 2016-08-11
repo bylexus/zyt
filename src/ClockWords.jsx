@@ -13,14 +13,14 @@ function indexMatch(needleArr, haystack) {
 
 class ClockWords extends React.Component {
     getTimeInfo() {
-        return timeInfo[this.props.lang];
+        return timeInfo[this.props.settings.lang];
     }
 
     getContainerStyles() {
         return {
-            'fontFamily': this.context.settings.fontFamily || 'Montserrat',
+            'fontFamily': this.props.settings.fontFamily || 'Montserrat',
             'display':'flex',
-            'backgroundColor': this.context.settings.bgColor,
+            'backgroundColor': this.props.settings.bgColor,
             'flexDirection': 'column',
             'flexWrap': 'nowrap',
             'justifyContent':'space-between',
@@ -69,7 +69,7 @@ class ClockWords extends React.Component {
             dimmedShadowColor,
             fgActiveColor,
             fgDimmedColor
-        } = this.context.settings;
+        } = this.props.settings;
 
         let actualStyle = {
             color: fgActiveColor,
@@ -79,9 +79,8 @@ class ClockWords extends React.Component {
             'flexGrow': 1,
             'textAlign': 'center',
             'alignSelf': 'flex-end',
-            'fontSize': (100 / (words.length) * 0.95) + 'vmin',
+            'fontSize': (100 / (words.length) * 0.9) + 'vmin',
             'lineHeight': (100 / (words.length)) + 'vmin',
-            'fontWeight': 'bold',
             'color': fgDimmedColor,
             textShadow: `${dimmedShadowX}px ${dimmedShadowY}px ${dimmedShadowBlur}px ${hex2rgba(dimmedShadowColor,90)}`
         };
@@ -97,7 +96,7 @@ class ClockWords extends React.Component {
                         }
 
                         return item.split('').map((char,charIndex) => (
-                            <div className={char === '.' ? 'pulse word-animation':'word-animation'} style={style} key={charIndex}>{char}</div>
+                            <div className={char === '.' ? 'pulse word-animation':'word-animation'} style={style} key={charIndex}>{this.props.settings.upperCase ? char.toUpperCase() : char}</div>
                         ));
                     })}
                 </div>
@@ -109,11 +108,8 @@ class ClockWords extends React.Component {
 
 ClockWords.propTypes = {
     date: React.PropTypes.instanceOf(Date).isRequired,
-    lang: React.PropTypes.string.isRequired,
+    settings: React.PropTypes.object.isRequired,
     onClick: React.PropTypes.func.isRequired
-};
-ClockWords.contextTypes = {
-    settings: React.PropTypes.object
 };
 
 export default ClockWords;

@@ -1,14 +1,14 @@
 const words = [
     // 12 chars per line
-    ['IT\'S','A','TWENTY','.'],
-    ['OV','TEN','M','FIVE','RA'],
-    ['A','V','QUARTER','B','TO'],
-    ['HALF','KL','PAST','PJ'],
-    ['ONE','TWO','THREE','G'],
-    ['FOUR','PM','FIVE','TA'],
-    ['SIX','P','SEVEN','TEN'],
-    ['EIGHT','RU','NINE','W'],
-    ['ELEVEN','TWELVE']
+    ['It\'s','a','twenty','.'],
+    ['ov','ten','m','five','ra'],
+    ['a','v','quarter','b','to'],
+    ['half','kl','past','pj'],
+    ['one','two','three','g'],
+    ['four','pm','five','ta'],
+    ['six','p','seven','ten'],
+    ['eight','ru','nine','w'],
+    ['eleven','twelve']
 ];
 
 const times = {
