@@ -1,8 +1,10 @@
 import React from 'react';
 import screenfull from 'screenfull';
+import queryString from 'query-string';
 import tr from './i18n';
 
-export const settings = Object.assign({
+export const settings = Object.assign(
+{
     bgColor: '#000000',
     fgDimmedColor: '#333333',
     fgActiveColor: '#ffffff',
@@ -17,8 +19,14 @@ export const settings = Object.assign({
     keepScreenActive: false,
     lang: 'zueri',
     fontFamily: 'Montserrat',
-    upperCase: true
-}, JSON.parse(localStorage.getItem('as-clock')) || {});
+    upperCase: true,
+    disableSettings: false
+},
+    // override defaults with local storage items:
+    JSON.parse(localStorage.getItem('as-clock')) || {},
+    // override defaults with Query Param items:
+    queryString.parse(location.search)
+);
 
 let settingsListener = null;
 function storeSettings(obj) {

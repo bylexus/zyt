@@ -43,10 +43,16 @@ function startApp() {
             };
         }
 
+        toggleSettingsDlg() {
+            if (!this.context.settings.disableSettings) {
+                this.setState({showSettingsDlg: !this.state.showSettingsDlg});
+            }
+        }
+
         render() {
             return (
                 <div className="app-container" style={{backgroundColor: this.context.settings.bgColor}} >
-                    <Clock style={{height: '100%'}} onClick={() => this.setState({showSettingsDlg: !this.state.showSettingsDlg})}/>
+                    <Clock style={{height: '100%'}} onClick={() => this.toggleSettingsDlg()}/>
                     {this.state.showSettingsDlg && <SettingsDlg /> }
                 </div>
             );

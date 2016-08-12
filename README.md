@@ -26,6 +26,58 @@ Some screens:
 ![First Screenshot](./2016-08-08-u07ny.png)
 ![2nd Screenshot](./2016-08-10-9d9fa.png)
 
+Embed it into your web page!
+----------------------------
+
+Use the clock on your own web site with the following HTML snippet:
+
+```html
+<iframe src="http://zyt.alexi.ch/" width="800" height="600" style="border:none" ></iframe>
+```
+
+### Snippet parameters
+
+You can use URL parameters to style the embedded clock. An example:
+
+```html
+<iframe src="http://zyt.alexi.ch/?bgColor=%23990000&fgActiveColor=%23ff0000&activeShadowColor=rgba(55,255,0,0.8)" width="400" height="300" style="border:none" ></iframe>
+```
+
+generates:
+
+<iframe src="http://zyt.alexi.ch/?bgColor=%23990000&fgActiveColor=%23ff0000&activeShadowColor=rgba(55,255,0,0.8)" width="400" height="300" style="border:none" ></iframe>
+
+
+*NOTE* that you have to URL-encode CSS Color values in the form `#aabbcc` to `%23aabbcc` to form a correct url.
+
+The clock knows the following parameters:
+
+* `bgColor`: Background color (css value), e.g. `%23000000`, or `rgb(0,0,0)`
+* fgDimmedColor: foreground color for inactive chars (css value), e.g. `%23000000`, or `rgb(0,0,0)`
+* `fgActiveColor`: foreground color for active chars (css value), e.g. `%23000000`, or `rgb(0,0,0)`
+* `activeShadowX`: active char's X shadow offset, integer, e.g. `3`
+* `activeShadowY`: active char's Y shadow offset, integer, e.g. `3`
+* `activeShadowBlur`: active char's blur value, integer, e.g. `5`
+* `activeShadowColor`: active char's shadow color (css value), e.g. `%23000000`, or `rgb(0,0,0)`
+* `dimmedShadowX`: dimmed char's X shadow offset, integer, e.g. `3`
+* `dimmedShadowY`: dimmed char's Y shadow offset, integer, e.g. `3`
+* `dimmedShadowBlur`: dimmed char's blur value, integer, e.g. `5`
+* `dimmedShadowColor`: dimmed char's shadow color (css value), e.g. `%23000000`, or `rgb(0,0,0)`
+* `lang`: 'zueri': clock language. Supported at the moment:
+  * `zueri`: Swiss German dialect around Zurich
+  * `bern`: Swiss German dialect around Bern
+  * `deutsch_std`: German
+  * `entlish_std`: English
+* `fontFamily`: The CSS Font family name, including the following embedded ones (Note to url-encode spaces `%20`):
+  * Bree Serif
+  * Libre Baskerville
+  * Monoton
+  * Montserrat
+  * Roboto Mono
+  * Ultra
+* `upperCase`: Set `upperCase=1` to have upper cased characters, `upperCase=` (no value) for lower case chars
+* `disableSettings`: Set `disableSettings=1` to disable the style menu functionality. Useful if you use it as web site widget.
+
 Dev
 ---
 

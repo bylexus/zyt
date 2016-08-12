@@ -1,5 +1,4 @@
 import React from 'react';
-import hex2rgba from 'hex-rgba';
 import timeInfo from './times';
 
 function indexMatch(needleArr, haystack) {
@@ -73,7 +72,7 @@ class ClockWords extends React.Component {
 
         let actualStyle = {
             color: fgActiveColor,
-            textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${hex2rgba(activeShadowColor,100)}`
+            textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${activeShadowColor}`
         };
         let dimmedStyle = {
             'flexGrow': 1,
@@ -82,7 +81,7 @@ class ClockWords extends React.Component {
             'fontSize': (100 / (words.length) * 0.9) + 'vmin',
             'lineHeight': (100 / (words.length)) + 'vmin',
             'color': fgDimmedColor,
-            textShadow: `${dimmedShadowX}px ${dimmedShadowY}px ${dimmedShadowBlur}px ${hex2rgba(dimmedShadowColor,90)}`
+            textShadow: `${dimmedShadowX}px ${dimmedShadowY}px ${dimmedShadowBlur}px ${dimmedShadowColor}`
         };
         return (
             <div style={this.getContainerStyles()} onClick={this.props.onClick}>
