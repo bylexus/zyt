@@ -126,10 +126,18 @@ export class SettingsDlg extends React.Component {
                     <label><span>{tr('FONT')}:</span>
                     <select value={this.state.fontFamily} onChange={this.changeSetting} id="fontFamily">
                         <option value="Bree Serif">Bree Serif</option>
+                        <option value="Bungee Inline">Bungee Inline</option>
+                        <option value="Crushed">Crushed</option>
                         <option value="Libre Baskerville">Libre Baskerville</option>
+                        <option value="Macondo Swash Caps">Macondo Swash Caps</option>
+                        <option value="Merienda One">Merienda One</option>
                         <option value="Monoton">Monoton</option>
                         <option value="Montserrat">Montserrat</option>
                         <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Spicy Rice">Spicy Rice</option>
+                        <option value="Stardos Stencil">Stardos Stencil</option>
+                        <option value="Syncopate">Syncopate</option>
+                        <option value="Ubuntu">Ubuntu</option>
                         <option value="Ultra">Ultra</option>
                     </select>
                 </label></div>

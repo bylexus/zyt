@@ -83,6 +83,116 @@
        url('../resources/fonts/Monoton/Monoton-regular.svg#Monoton') format('svg');
 }
 
+@font-face {
+  font-family: 'Macondo Swash Caps';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.eot');
+  src: url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.eot?#iefix') format('embedded-opentype'),
+       local('Macondo Swash Caps'),
+       local('Macondo-Swash-Caps-regular'),
+       url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.woff2') format('woff2'),
+       url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.woff') format('woff'),
+       url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.ttf') format('truetype'),
+       url('../resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.svg#MacondoSwashCaps') format('svg');
+}
+
+@font-face {
+  font-family: 'Stardos Stencil';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.eot');
+  src: url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.eot?#iefix') format('embedded-opentype'),
+       local('Stardos Stencil Regular'),
+       local('Stardos-Stencil-regular'),
+       url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.woff2') format('woff2'),
+       url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.woff') format('woff'),
+       url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.ttf') format('truetype'),
+       url('../resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.svg#StardosStencil') format('svg');
+}
+
+@font-face {
+  font-family: 'Crushed';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Crushed/Crushed-regular.eot');
+  src: url('../resources/fonts/Crushed/Crushed-regular.eot?#iefix') format('embedded-opentype'),
+       local('Crushed'),
+       local('Crushed-regular'),
+       url('../resources/fonts/Crushed/Crushed-regular.woff2') format('woff2'),
+       url('../resources/fonts/Crushed/Crushed-regular.woff') format('woff'),
+       url('../resources/fonts/Crushed/Crushed-regular.ttf') format('truetype'),
+       url('../resources/fonts/Crushed/Crushed-regular.svg#Crushed') format('svg');
+}
+
+@font-face {
+  font-family: 'Merienda One';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Merienda-One/Merienda-One-regular.eot');
+  src: url('../resources/fonts/Merienda-One/Merienda-One-regular.eot?#iefix') format('embedded-opentype'),
+       local('Merienda One'),
+       local('Merienda-One-regular'),
+       url('../resources/fonts/Merienda-One/Merienda-One-regular.woff2') format('woff2'),
+       url('../resources/fonts/Merienda-One/Merienda-One-regular.woff') format('woff'),
+       url('../resources/fonts/Merienda-One/Merienda-One-regular.ttf') format('truetype'),
+       url('../resources/fonts/Merienda-One/Merienda-One-regular.svg#MeriendaOne') format('svg');
+}
+
+@font-face {
+  font-family: 'Syncopate';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Syncopate/Syncopate-regular.eot');
+  src: url('../resources/fonts/Syncopate/Syncopate-regular.eot?#iefix') format('embedded-opentype'),
+       local('Syncopate'),
+       local('Syncopate-regular'),
+       url('../resources/fonts/Syncopate/Syncopate-regular.woff2') format('woff2'),
+       url('../resources/fonts/Syncopate/Syncopate-regular.woff') format('woff'),
+       url('../resources/fonts/Syncopate/Syncopate-regular.ttf') format('truetype'),
+       url('../resources/fonts/Syncopate/Syncopate-regular.svg#Syncopate') format('svg');
+}
+
+@font-face {
+  font-family: 'Spicy Rice';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.eot');
+  src: url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.eot?#iefix') format('embedded-opentype'),
+       local('Spicy Rice'),
+       local('Spicy-Rice-regular'),
+       url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.woff2') format('woff2'),
+       url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.woff') format('woff'),
+       url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.ttf') format('truetype'),
+       url('../resources/fonts/Spicy-Rice/Spicy-Rice-regular.svg#SpicyRice') format('svg');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Ubuntu/Ubuntu-regular.eot');
+  src: url('../resources/fonts/Ubuntu/Ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+       local('Ubuntu'),
+       local('Ubuntu-regular'),
+       url('../resources/fonts/Ubuntu/Ubuntu-regular.woff2') format('woff2'),
+       url('../resources/fonts/Ubuntu/Ubuntu-regular.woff') format('woff'),
+       url('../resources/fonts/Ubuntu/Ubuntu-regular.ttf') format('truetype'),
+       url('../resources/fonts/Ubuntu/Ubuntu-regular.svg#Ubuntu') format('svg');
+}
+
+@font-face {
+  font-family: 'Bungee Inline';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Bungee-Inline/Bungee-Inline.eot');
+  src: url('../resources/fonts/Bungee-Inline/Bungee-Inline.eot?#iefix') format('embedded-opentype'),
+       local('Bungee Inline'),
+       url('../resources/fonts/Bungee-Inline/Bungee-Inline.woff2') format('woff2'),
+       url('../resources/fonts/Bungee-Inline/Bungee-Inline.woff') format('woff');
+}
+
+
 
 html, body {
     width: 100%;
