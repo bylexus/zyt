@@ -42,8 +42,10 @@
         <icon height="144" src="assets/ios-icons/icon-ios-144.png" width="144" />
         <icon height="29" src="assets/ios-icons/icon-ios-29.png" width="29" />
         <icon height="58" src="assets/ios-icons/icon-ios-58.png" width="58" />
+        <icon height="87" src="assets/ios-icons/icon-ios-87.png" width="87" />
         <icon height="50" src="assets/ios-icons/icon-ios-50.png" width="50" />
         <icon height="100" src="assets/ios-icons/icon-ios-100.png" width="100" />
+        <icon height="167" src="assets/ios-icons/icon-ios-167.png" width="167" />
 
         <!-- images are determined by width and height. The following are supported -->
         <splash src="assets/ios-icons/splash-320x480.png" width="320" height="480"/>
