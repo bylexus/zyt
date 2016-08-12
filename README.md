@@ -67,7 +67,7 @@ The clock knows the following parameters:
   * `zueri`: Swiss German dialect around Zurich
   * `bern`: Swiss German dialect around Bern
   * `deutsch_std`: German
-  * `entlish_std`: English
+  * `english_std`: English
 * `fontFamily`: The CSS Font family name, including the following embedded ones (Note to url-encode spaces `%20`):
   * Bree Serif
   * Libre Baskerville
