@@ -18,6 +18,9 @@ function onDeviceReady() {
         setCurrentScreenActivationMode();
     },false);
 
+    // Hide status bar:
+    window.StatusBar.hide();
+
     // Set initial screen activation mode:
     setCurrentScreenActivationMode();
     i18nInit().then(startApp);
