@@ -54,7 +54,7 @@ function startApp() {
 
         render() {
             return (
-                <div className="app-container" style={{backgroundColor: this.context.settings.bgColor}} >
+                <div>
                     <Clock style={{height: '100%'}} onClick={() => this.toggleSettingsDlg()}/>
                     {this.state.showSettingsDlg && <SettingsDlg /> }
                 </div>

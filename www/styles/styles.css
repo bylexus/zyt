@@ -207,15 +207,6 @@ body {
     background-color: black;
 }
 
-#app {
-    height: 100%;
-}
-
-.app-container {
-    height: 100%;
-}
-
-
 button {
     border: 1px solid #ccc;
     padding: 8px;

@@ -23,7 +23,13 @@ class ClockWords extends React.Component {
             'flexDirection': 'column',
             'flexWrap': 'nowrap',
             'justifyContent':'space-between',
-            'height': '100%'
+            'position': 'absolute',
+            'top':0,
+            'left': 0,
+            'right': 0,
+            'bottom': 0,
+            'paddingTop':'10px',
+            'paddingBottom':'5px'
         };
     }
 
@@ -77,7 +83,7 @@ class ClockWords extends React.Component {
         let dimmedStyle = {
             'flexGrow': 1,
             'textAlign': 'center',
-            'alignSelf': 'flex-end',
+            'alignSelf': 'center',
             'fontSize': (100 / (words.length) * 0.9) + 'vmin',
             'lineHeight': (100 / (words.length)) + 'vmin',
             'color': fgDimmedColor,
