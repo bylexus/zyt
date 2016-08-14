@@ -33,7 +33,8 @@ function createSettingsUrl(settings) {
         let value = settings[key];
         return `${key}=${value === false? '' : encodeURIComponent(value)}`;
     }).join('&');
-    return `${location.href.replace(/\?.*/,'')}?${query}`;
+    let base = window.cordova ? 'https://zyt.alexi.ch/' : location.href.replace(/\?.*/,'');
+    return `${base}?${query}`;
 }
 
 let settingsListener = null;

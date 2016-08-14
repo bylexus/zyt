@@ -257,7 +257,7 @@ select {
     right: 0;
     margin: auto;
     max-width: 355px;
-    max-height: 355px;
+    max-height: 365px;
     overflow: auto;
     background-color: #345;
     border: 1px solid #888;
