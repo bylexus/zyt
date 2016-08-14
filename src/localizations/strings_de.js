@@ -1,6 +1,7 @@
 export default {
     'BACKGROUND': 'Hintergrund',
     'BLUR': 'blur',
+    'CLOCK_URL': 'Link zu dieser Uhr',
     'FG_ACTIVE': 'VG aktiv',
     'FG_ACTIVE_SHADOW': 'VG-Schatten aktiv',
     'FG_DIMMED': 'VG gedimmt',

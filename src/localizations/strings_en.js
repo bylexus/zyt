@@ -1,6 +1,7 @@
 export default {
     'BACKGROUND': 'Background',
     'BLUR': 'blur',
+    'CLOCK_URL': 'Link for this clock',
     'FG_ACTIVE': 'FG active',
     'FG_ACTIVE_SHADOW': 'FG active shadow',
     'FG_DIMMED': 'FG dimmed',

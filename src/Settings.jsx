@@ -28,6 +28,14 @@ export const settings = Object.assign(
     queryString.parse(location.search)
 );
 
+function createSettingsUrl(settings) {
+    let query = Object.keys(settings).map((key) => {
+        let value = settings[key];
+        return `${key}=${value === false? '' : encodeURIComponent(value)}`;
+    }).join('&');
+    return `${location.href.replace(/\?.*/,'')}?${query}`;
+}
+
 let settingsListener = null;
 function storeSettings(obj) {
     Object.assign(settings, obj);
@@ -146,10 +154,10 @@ export class SettingsDlg extends React.Component {
                     <label><span>{tr('UPPERCASE')}</span> <input type="checkbox" id="upperCase" checked={this.state.upperCase} onChange={this.changeCheckboxSetting} /></label>
                 </div>
 
-                <div>
-                    <button style={colBtnStyle} data-for="bgColor" className="jscolor">{tr('BACKGROUND')}</button>&nbsp;
-                    <button style={colBtnStyle} data-for="fgActiveColor" className="jscolor">{tr('FG_ACTIVE')}</button>&nbsp;
-                    <button style={colBtnStyle} data-for="fgDimmedColor" className="jscolor">{tr('FG_DIMMED')}</button>&nbsp;
+                <div style={{textAlign: 'center'}}>
+                    <button style={colBtnStyle} data-for="bgColor" className="jscolor">{tr('BACKGROUND')}<br/>{this.state.bgColor}</button>&nbsp;
+                    <button style={colBtnStyle} data-for="fgActiveColor" className="jscolor">{tr('FG_ACTIVE')}<br/>{this.state.fgActiveColor}</button>&nbsp;
+                    <button style={colBtnStyle} data-for="fgDimmedColor" className="jscolor">{tr('FG_DIMMED')}<br />{this.state.fgDimmedColor}</button>&nbsp;
                     <input type="hidden" id="bgColor" value={this.state.bgColor} />
                     <input type="hidden" id="fgActiveColor" value={this.state.fgActiveColor}/>
                     <input type="hidden" id="fgDimmedColor" value={this.state.fgDimmedColor} />
@@ -187,6 +195,9 @@ export class SettingsDlg extends React.Component {
                         window.open('https://github.com/bylexus/talking-clock','alexich_github');
                         return false;
                     }}>{tr('INFO_ON_GITHUB')}</button>
+                </div>
+                <div>
+                    <a href={createSettingsUrl(this.state)} target="_blank">{tr('CLOCK_URL')}</a>
                 </div>
             </div>
         );
