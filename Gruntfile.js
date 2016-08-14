@@ -84,9 +84,20 @@ module.exports = function(grunt) {
         },
 
         processhtml: {
+            options: {strip: true},
+            dev: {
+                files: {
+                    'www/index.html': ['index.tpl.html']
+                }
+            },
             web: {
                 files: {
-                    'build/index.html': ['www/index.html']
+                    'build/index.html': ['index.tpl.html']
+                }
+            },
+            app: {
+                files: {
+                    'www/index.html': ['index.tpl.html']
                 }
             }
         }
@@ -94,8 +105,8 @@ module.exports = function(grunt) {
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['env:dev','browserify:dev']);
-    grunt.registerTask('build:app', ['env:build','browserify:app','uglify:app']);
+    grunt.registerTask('default', ['env:dev','processhtml:dev','browserify:dev']);
+    grunt.registerTask('build:app', ['env:build','processhtml:app','browserify:app','uglify:app']);
     grunt.registerTask('build:web', ['clean:build','env:build','browserify:prod','copy:build','uglify:prod','processhtml:web']);
 
 };
