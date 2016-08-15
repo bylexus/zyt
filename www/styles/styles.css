@@ -207,13 +207,21 @@ body {
     background-color: black;
 }
 
-button {
+button,.button {
     border: 1px solid #ccc;
     padding: 8px;
     background-color: #3A4A5A;
     color: #ccc;
+    display: inline-block;
+    text-decoration: none;
     border-radius: 10px;
     margin-bottom: 2px;
+    font-size: 11px;
+}
+
+button:hover, .button:hover {
+    background-color: #7c7b7b;
+    cursor: pointer;
 }
 
 select {
@@ -256,8 +264,8 @@ select {
     bottom: 0;
     right: 0;
     margin: auto;
-    max-width: 355px;
-    max-height: 365px;
+    max-width: 380px;
+    max-height: 380px;
     overflow: auto;
     background-color: #345;
     border: 1px solid #888;

@@ -188,17 +188,11 @@ export class SettingsDlg extends React.Component {
                     {!window.cordova && <button onClick={this.toggleFullScreen}>{tr('TOGGLE_FULLSCREEN')}</button>}
 
                     {window.plugins && window.plugins.insomnia && (
-                        <label><span>{tr('KEEP_SCREEN_ON')}</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label>
+                        <div><label><span>{tr('KEEP_SCREEN_ON')}</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label></div>
                     )}
 
-                    <button style={{float: 'right'}} onClick={(e) => {
-                        e.preventDefault();
-                        window.open('https://github.com/bylexus/talking-clock','alexich_github');
-                        return false;
-                    }}>{tr('INFO_ON_GITHUB')}</button>
-                </div>
-                <div>
-                    <a href={createSettingsUrl(this.state)} target="_blank">{tr('CLOCK_URL')}</a>
+                    <a href={createSettingsUrl(this.state)} className="button" style={{float:'right',marginRight:2,marginLeft:2}} target="_blank">{tr('CLOCK_URL')}</a>
+                    <a href="https://github.com/bylexus/talking-clock" className="button" style={{float: 'right'}} target="_blank">{tr('INFO_ON_GITHUB')}</a>
                 </div>
             </div>
         );
