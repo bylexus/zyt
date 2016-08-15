@@ -192,6 +192,62 @@
        url('../resources/fonts/Bungee-Inline/Bungee-Inline.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Wallpoet';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Wallpoet/Wallpoet-regular.eot');
+  src: url('../resources/fonts/Wallpoet/Wallpoet-regular.eot?#iefix') format('embedded-opentype'),
+       local('Wallpoet'),
+       local('Wallpoet-regular'),
+       url('../resources/fonts/Wallpoet/Wallpoet-regular.woff2') format('woff2'),
+       url('../resources/fonts/Wallpoet/Wallpoet-regular.woff') format('woff'),
+       url('../resources/fonts/Wallpoet/Wallpoet-regular.ttf') format('truetype'),
+       url('../resources/fonts/Wallpoet/Wallpoet-regular.svg#Wallpoet') format('svg');
+}
+
+@font-face {
+  font-family: 'Faster One';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Faster-One/Faster-One-regular.eot');
+  src: url('../resources/fonts/Faster-One/Faster-One-regular.eot?#iefix') format('embedded-opentype'),
+       local('Faster One'),
+       local('Faster-One-regular'),
+       url('../resources/fonts/Faster-One/Faster-One-regular.woff2') format('woff2'),
+       url('../resources/fonts/Faster-One/Faster-One-regular.woff') format('woff'),
+       url('../resources/fonts/Faster-One/Faster-One-regular.ttf') format('truetype'),
+       url('../resources/fonts/Faster-One/Faster-One-regular.svg#FasterOne') format('svg');
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Audiowide/Audiowide-regular.eot');
+  src: url('../resources/fonts/Audiowide/Audiowide-regular.eot?#iefix') format('embedded-opentype'),
+       local('Audiowide'),
+       local('Audiowide-regular'),
+       url('../resources/fonts/Audiowide/Audiowide-regular.woff2') format('woff2'),
+       url('../resources/fonts/Audiowide/Audiowide-regular.woff') format('woff'),
+       url('../resources/fonts/Audiowide/Audiowide-regular.ttf') format('truetype'),
+       url('../resources/fonts/Audiowide/Audiowide-regular.svg#Audiowide') format('svg');
+}
+
+@font-face {
+  font-family: 'Black Ops One';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.eot');
+  src: url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.eot?#iefix') format('embedded-opentype'),
+       local('Black Ops One'),
+       local('Black-Ops-One-regular'),
+       url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.woff2') format('woff2'),
+       url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.woff') format('woff'),
+       url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.ttf') format('truetype'),
+       url('../resources/fonts/Black-Ops-One/Black-Ops-One-regular.svg#BlackOpsOne') format('svg');
+}
+
 
 
 html, body {

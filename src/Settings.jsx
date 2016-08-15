@@ -134,9 +134,12 @@ export class SettingsDlg extends React.Component {
                 <div>
                     <label><span>{tr('FONT')}:</span>
                     <select value={this.state.fontFamily} onChange={this.changeSetting} id="fontFamily">
+                        <option value="Audiowide">Audiowide</option>
+                        <option value="Black Ops One">Black Ops One</option>
                         <option value="Bree Serif">Bree Serif</option>
                         <option value="Bungee Inline">Bungee Inline</option>
                         <option value="Crushed">Crushed</option>
+                        <option value="Faster One">Faster One</option>
                         <option value="Libre Baskerville">Libre Baskerville</option>
                         <option value="Macondo Swash Caps">Macondo Swash Caps</option>
                         <option value="Merienda One">Merienda One</option>
@@ -148,6 +151,7 @@ export class SettingsDlg extends React.Component {
                         <option value="Syncopate">Syncopate</option>
                         <option value="Ubuntu">Ubuntu</option>
                         <option value="Ultra">Ultra</option>
+                        <option value="Wallpoet">Wallpoet</option>
                     </select>
                 </label></div>
 

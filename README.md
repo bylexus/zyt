@@ -69,9 +69,12 @@ The clock knows the following parameters:
   * `deutsch_std`: German
   * `english_std`: English
 * `fontFamily`: The CSS Font family name, including the following embedded ones (Note to url-encode spaces `%20`):
+  * Audiowide
+  * Black Ops One
   * Bree Serif
   * Bungee Inline
   * Crushed
+  * Faster One
   * Libre Baskerville
   * Macondo Swash Caps
   * Merienda One
@@ -83,6 +86,7 @@ The clock knows the following parameters:
   * Syncopate
   * Ubuntu
   * Ultra
+  * Wallpoet
 * `upperCase`: Set `upperCase=1` to have upper cased characters, `upperCase=` (no value) for lower case chars
 * `disableSettings`: Set `disableSettings=1` to disable the style menu functionality. Useful if you use it as web site widget.
 
