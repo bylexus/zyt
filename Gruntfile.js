@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'www/',
-                    src: ['styles/**','resources/**'],
+                    src: ['cache.manifest','styles/**','resources/**'],
                     dest: 'build/'
                 }]
             }

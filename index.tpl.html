@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html manifest="manifest.appcache">
     <head>
         <meta charset="UTF-8" />
         <!-- build:remove:web -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Zyt - Time" />
+        <meta name="apple-mobile-web-app-title" content="Zyt - Time" />
         <!-- /build -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
         <title>Zyt - Stylish Clock</title>
-        <meta name="Description" content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget.">
-        <link href="styles/styles.css" rel="stylesheet" type="text/css">
+        <meta name="Description" content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget."/>
+        <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
         <!-- build:remove:dev,web -->
         <script type="text/javascript" src="cordova.js"></script>
         <!-- /build -->
