@@ -20,6 +20,8 @@ Features
   * Dimmed and active Foreground text color and shadow
   * Font family
 * Keep screen on if you want to use the clock as wall panel
+* Embed it into your web page via snippet code
+* Create a link to your customized clock
 
 Some screens:
 
