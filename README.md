@@ -91,6 +91,7 @@ The clock knows the following parameters:
   * Wallpoet
 * `upperCase`: Set `upperCase=1` to have upper cased characters, `upperCase=` (no value) for lower case chars
 * `disableSettings`: Set `disableSettings=1` to disable the style menu functionality. Useful if you use it as web site widget.
+* `clickUrl`: Set `clickUrl` to a web site (e.g. `clickUrl=https://zyt.alexi.ch`) to open the link instead of the settings dialog. Overrides `disableSettings`.
 
 Dev
 ---

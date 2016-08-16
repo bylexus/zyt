@@ -20,7 +20,8 @@ export const settings = Object.assign(
     lang: 'zueri',
     fontFamily: 'Montserrat',
     upperCase: true,
-    disableSettings: false
+    disableSettings: false,
+    clickUrl: null
 },
     // override defaults with local storage items:
     JSON.parse(localStorage.getItem('as-clock')) || {},
@@ -31,7 +32,7 @@ export const settings = Object.assign(
 function createSettingsUrl(settings) {
     let query = Object.keys(settings).map((key) => {
         let value = settings[key];
-        return `${key}=${value === false? '' : encodeURIComponent(value)}`;
+        return `${key}=${value === false || value === null? '' : encodeURIComponent(value)}`;
     }).join('&');
     let base = window.cordova ? 'https://zyt.alexi.ch/' : location.href.replace(/\?.*/,'');
     return `${base}?${query}`;

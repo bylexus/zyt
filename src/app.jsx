@@ -47,7 +47,9 @@ function startApp() {
         }
 
         toggleSettingsDlg() {
-            if (!this.context.settings.disableSettings) {
+            if (this.context.settings.clickUrl) {
+                window.open(this.context.settings.clickUrl,'zyt_clock');
+            } else if (!this.context.settings.disableSettings) {
                 this.setState({showSettingsDlg: !this.state.showSettingsDlg});
             }
         }
