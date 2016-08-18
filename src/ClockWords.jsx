@@ -18,27 +18,7 @@ class ClockWords extends React.Component {
     getContainerStyles() {
         return {
             'fontFamily': this.props.settings.fontFamily || 'Montserrat',
-            'display':'flex',
-            'backgroundColor': this.props.settings.bgColor,
-            'flexDirection': 'column',
-            'flexWrap': 'nowrap',
-            'justifyContent':'space-between',
-            'position': 'absolute',
-            'top':0,
-            'left': 0,
-            'right': 0,
-            'bottom': 0,
-            'paddingTop':'10px',
-            'paddingBottom':'5px'
-        };
-    }
-
-    getLineStyles() {
-        return {
-            'display':'flex',
-            'flexDirection': 'row',
-            'flexGrow':1,
-            'justifyContent':'space-between'
+            'backgroundColor': this.props.settings.bgColor
         };
     }
 
@@ -81,18 +61,15 @@ class ClockWords extends React.Component {
             textShadow: `${activeShadowX}px ${activeShadowY}px ${activeShadowBlur}px ${activeShadowColor}`
         };
         let dimmedStyle = {
-            'flexGrow': 1,
-            'textAlign': 'center',
-            'alignSelf': 'center',
             'fontSize': (100 / (words.length) * 0.9) + 'vmin',
             'lineHeight': (100 / (words.length)) + 'vmin',
             'color': fgDimmedColor,
             textShadow: `${dimmedShadowX}px ${dimmedShadowY}px ${dimmedShadowBlur}px ${dimmedShadowColor}`
         };
         return (
-            <div style={this.getContainerStyles()} onClick={this.props.onClick}>
+            <div className="clock-words container" style={this.getContainerStyles()} onClick={this.props.onClick}>
             {words.map((line,lineIndex) => (
-                <div key={lineIndex} style={this.getLineStyles()} className="no-select">
+                <div key={lineIndex} className="clock-words line no-select">
                     {line.map((item,itemIndex) => {
                         let needle = [lineIndex, itemIndex];
                         let style = Object.assign({},dimmedStyle);
@@ -101,7 +78,7 @@ class ClockWords extends React.Component {
                         }
 
                         return item.split('').map((char,charIndex) => (
-                            <div className={char === '.' ? 'pulse word-animation':'word-animation'} style={style} key={charIndex}>{this.props.settings.upperCase ? char.toUpperCase() : char}</div>
+                            <div className={char === '.' ? 'pulse word-animation clock-words char':'word-animation clock-words char'} style={style} key={charIndex}>{this.props.settings.upperCase ? char.toUpperCase() : char}</div>
                         ));
                     })}
                 </div>

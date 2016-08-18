@@ -41,6 +41,7 @@ function startApp() {
     class App extends React.Component {
         constructor(props) {
             super(props);
+            this.toggleSettingsDlg = this.toggleSettingsDlg.bind(this);
             this.state = {
                 showSettingsDlg: false
             };
@@ -58,7 +59,7 @@ function startApp() {
             return (
                 <div>
                     <Clock style={{height: '100%'}} onClick={() => this.toggleSettingsDlg()}/>
-                    {this.state.showSettingsDlg && <SettingsDlg /> }
+                    {this.state.showSettingsDlg && <SettingsDlg onClose={this.toggleSettingsDlg}/> }
                 </div>
             );
         }

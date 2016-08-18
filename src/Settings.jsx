@@ -122,6 +122,7 @@ export class SettingsDlg extends React.Component {
         let colBtnStyle = {width: 100};
         return (
             <div className="settings-dialog container">
+                <div className="closer"><a href="#" onClick={this.props.onClose}>X</a></div>
                 <div><label><span>{tr('LANG')}:</span>
                     <select value={this.state.lang} onChange={this.changeSetting} id="lang">
                         <option value="zueri">Züri-Düütsch</option>
@@ -203,6 +204,10 @@ export class SettingsDlg extends React.Component {
         );
     }
 }
+
+SettingsDlg.propTypes = {
+    onClose: React.PropTypes.func.isRequired
+};
 
 class Settings extends React.Component {
     constructor(props) {

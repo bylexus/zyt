@@ -115,6 +115,12 @@ Build App
 * `ANDROID_HOME=/path/to/android/sdk cordova build android`
 * `cordova build ios`
 
+Build css
+---------
+
+* `npm install --global postcss-cli autoprefixer`
+* `postcss --use autoprefixer www/styles/styles.css > www/styles/styles.prefixed.css`
+
 
 Build icons
 -----------
