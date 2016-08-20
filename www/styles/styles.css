@@ -373,6 +373,9 @@ select {
     border: 1px solid #ccc;
     border-radius: 50%;
 }
+.settings-dialog .closer a:hover {
+    background-color: #aaa;
+}
 
 
 .settings-dialog label span {

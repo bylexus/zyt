@@ -7,6 +7,9 @@ module.exports = function(grunt) {
         clean: {
             build: {
                 src: ['build/']
+            },
+            chrome_ext_build: {
+                src: ['chrome_ext_build']
             }
         },
 
@@ -49,6 +52,17 @@ module.exports = function(grunt) {
                 files: {
                     'build/app.js': ['src/app.jsx']
                 }
+            },
+            chrome_ext_build: {
+                options: {
+                    browserifyOptions: {
+                        debug: false
+                    }
+                },
+                files: {
+                    'chrome_ext_build/app.js': ['src/app.jsx']
+                }
+
             }
         },
 
@@ -62,6 +76,11 @@ module.exports = function(grunt) {
                 files: {
                     'build/app.js': 'build/app.js'
                 }
+            },
+            chrome_ext_build: {
+                files: {
+                    'chrome_ext_build/app.js': 'chrome_ext_build/app.js'
+                }
             }
         },
         copy: {
@@ -71,6 +90,19 @@ module.exports = function(grunt) {
                     cwd: 'www/',
                     src: ['manifest.appcache','styles/**','resources/**'],
                     dest: 'build/'
+                }]
+            },
+            chrome_ext_build: {
+                files: [{
+                    expand: true,
+                    cwd: 'www/',
+                    src: ['styles/**','resources/**'],
+                    dest: 'chrome_ext_build/'
+                }, {
+                    expand: true,
+                    cwd: 'chrome_ext/',
+                    src: ['./**'],
+                    dest: 'chrome_ext_build/'
                 }]
             }
         },
@@ -95,6 +127,11 @@ module.exports = function(grunt) {
                     'build/index.html': ['index.tpl.html']
                 }
             },
+            chrome_ext_build: {
+                files: {
+                    'chrome_ext_build/index.html': ['index.tpl.html']
+                }
+            },
             app: {
                 files: {
                     'www/index.html': ['index.tpl.html']
@@ -108,6 +145,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['env:dev','processhtml:dev','browserify:dev']);
     grunt.registerTask('build:app', ['env:build','processhtml:app','browserify:app','uglify:app']);
     grunt.registerTask('build:web', ['clean:build','env:build','browserify:prod','copy:build','uglify:prod','processhtml:web']);
+    grunt.registerTask('build:chrome-ext', ['clean:chrome_ext_build','env:build','browserify:chrome_ext_build','copy:chrome_ext_build','uglify:chrome_ext_build','processhtml:chrome_ext_build']);
 
 };
 

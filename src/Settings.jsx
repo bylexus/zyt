@@ -122,7 +122,7 @@ export class SettingsDlg extends React.Component {
         let colBtnStyle = {width: 100};
         return (
             <div className="settings-dialog container">
-                <div className="closer"><a href="#" onClick={this.props.onClose}>X</a></div>
+                <div className="closer"><a href="#" onClick={(e) => { e.preventDefault();this.props.onClose();}}>X</a></div>
                 <div><label><span>{tr('LANG')}:</span>
                     <select value={this.state.lang} onChange={this.changeSetting} id="lang">
                         <option value="zueri">Züri-Düütsch</option>
@@ -191,7 +191,7 @@ export class SettingsDlg extends React.Component {
                     </div>
                 </fieldset>
                 <div>
-                    {!window.cordova && <button onClick={this.toggleFullScreen}>{tr('TOGGLE_FULLSCREEN')}</button>}
+                    {!window.cordova && (window.chrome ? !window.chrome.hasOwnProperty('extension') : true) && <button onClick={this.toggleFullScreen}>{tr('TOGGLE_FULLSCREEN')}</button>}
 
                     {window.plugins && window.plugins.insomnia && (
                         <div><label><span>{tr('KEEP_SCREEN_ON')}</span> <input type="checkbox" id="keepScreenActive" checked={this.state.keepScreenActive} onChange={this.changeScreenOnSetting} /></label></div>

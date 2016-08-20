@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!-- build:remove:app,chrome_ext_build -->
 <html manifest="manifest.appcache">
+<!-- /build -->
+
+<!-- build:remove:dev,web -->
+<html>
+<!-- /build -->
+
     <head>
         <meta charset="UTF-8" />
-        <!-- build:remove:web -->
+        <!-- build:remove:web,chrome_ext_build -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"/>
         <meta name="format-detection" content="telephone=no"/>
         <meta name="msapplication-tap-highlight" content="no"/>
@@ -11,19 +18,25 @@
         <meta name="application-name" content="Zyt - Time" />
         <meta name="apple-mobile-web-app-title" content="Zyt - Time" />
         <!-- /build -->
+
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
         <title>Zyt - Stylish Clock</title>
         <meta name="Description" content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget."/>
         <link href="styles/styles.prefixed.css" rel="stylesheet" type="text/css"/>
-        <!-- build:remove:dev,web -->
+        <!-- build:remove:dev,web,app -->
+        <link href="styles/chrome_ext_styles.css" rel="stylesheet" type="text/css"/>
+        <!-- /build -->
+
+        <!-- build:remove:dev,web,chrome_ext_build -->
         <script type="text/javascript" src="cordova.js"></script>
         <!-- /build -->
+
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript" src="app.js"></script>
-        <!-- build:remove:dev,app -->
+        <!-- build:remove:dev,app,chrome_ext_build -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,5 +48,6 @@
 
 </script>
         <!-- /build -->
+
     </body>
 </html>
