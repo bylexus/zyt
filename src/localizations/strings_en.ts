@@ -1,4 +1,5 @@
 export default {
+    'ANGLE': 'Angle',
     'BACKGROUND': 'Background',
     'BLUR': 'blur',
     'CLOCK_URL': 'Link for this clock',
@@ -11,6 +12,7 @@ export default {
     'INFO_ON_GITHUB':'info on github',
     'KEEP_SCREEN_ON': 'Keep screen on',
     'LANG': 'Lang',
+    'OPACITY': 'Opacity',
     'TOGGLE_FULLSCREEN': 'Toggle Full Screen',
     'UPPERCASE': 'Uppercase'
 };

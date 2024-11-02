@@ -22,12 +22,14 @@ const actStyles = computed(() => {
   let actualStyle = {
     color: props.settings.fgActiveColor,
     textShadow: `${props.settings.activeShadowX}px ${props.settings.activeShadowY}px ${props.settings.activeShadowBlur}px ${props.settings.activeShadowColor}`,
+    opacity: props.settings.fgActiveOpacity,
   };
   let dimmedStyle = {
     fontSize: (100 / timeInfo.words.length) * 0.9 + "vmin",
     lineHeight: (100 / timeInfo.words.length) * 1 + "vmin",
     color: props.settings.fgDimmedColor,
     textShadow: `${props.settings.dimmedShadowX}px ${props.settings.dimmedShadowY}px ${props.settings.dimmedShadowBlur}px ${props.settings.dimmedShadowColor}`,
+    opacity: props.settings.fgDimmedOpacity,
   };
   return { actualStyle, dimmedStyle };
 });

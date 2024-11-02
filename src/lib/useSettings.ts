@@ -6,7 +6,9 @@ export type Settings = {
   bgColor2: string;
   bgAngle: string;
   fgDimmedColor: string;
+  fgDimmedOpacity: string;
   fgActiveColor: string;
+  fgActiveOpacity: string;
   activeShadowX: string;
   activeShadowY: string;
   activeShadowBlur: string;
@@ -29,7 +31,9 @@ const settings: Settings = Object.assign(
     bgColor2: "#000000",
     bgAngle: "0",
     fgDimmedColor: "#333333",
+    fgDimmedOpacity: "1",
     fgActiveColor: "#ffffff",
+    fgActiveOpacity: "1",
     activeShadowX: "0",
     activeShadowY: "0",
     activeShadowBlur: "9",
@@ -50,8 +54,9 @@ const settings: Settings = Object.assign(
   // override defaults with Query Param items:
   queryString.parse(location.search)
 );
+console.log(settings.disableSettings);
 
-function createSettingsUrl(settings) {
+export function createSettingsUrl(settings: Settings): string {
   let query = Object.keys(settings)
     .map((key) => {
       let value = settings[key];
@@ -70,9 +75,13 @@ function storeSettings(settings) {
 }
 
 const settingsRef = reactive(settings);
-watch(settingsRef, (newSettings) => {
-  storeSettings(newSettings);
-});
+watch(
+  settingsRef,
+  (newSettings) => {
+    storeSettings(newSettings);
+  },
+  { immediate: true }
+);
 export default function useSettings() {
   return settingsRef;
 }

@@ -1,4 +1,5 @@
 export default {
+    'ANGLE': 'Winkel',
     'BACKGROUND': 'Hintergrund',
     'BLUR': 'blur',
     'CLOCK_URL': 'Link zu dieser Uhr',
@@ -11,6 +12,7 @@ export default {
     'INFO_ON_GITHUB':'info auf github',
     'KEEP_SCREEN_ON': 'Bildschirm aktiv lassen',
     'LANG': 'Sprache',
+    'OPACITY': 'Deckkraft',
     'TOGGLE_FULLSCREEN': 'Vollbild ein/aus',
     'UPPERCASE': 'Grossbuchstaben'
 };

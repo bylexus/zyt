@@ -1,23 +1,10 @@
 <script lang="ts" setup>
-import useSettings, { Settings } from "../lib/useSettings";
+import useSettings, { Settings, createSettingsUrl } from "../lib/useSettings";
 import { tr } from "../lib/i18n";
 
 const settings = defineModel<Settings>("settings", { default: useSettings() });
 const show = defineModel<boolean>();
 const emit = defineEmits(["toggle-fullscreen"]);
-
-function createSettingsUrl(settings: Settings) {
-  let query = Object.keys(settings)
-    .map((key) => {
-      let value = settings[key];
-      return `${key}=${
-        value === false || value === null ? "" : encodeURIComponent(value)
-      }`;
-    })
-    .join("&");
-  let base = location.href.replace(/\?.*/, "");
-  return `${base}?${query}`;
-}
 </script>
 <template>
   <div
@@ -104,7 +91,9 @@ function createSettingsUrl(settings: Settings) {
           <label>
             <div>{{ tr("ANGLE") }}</div>
             <input
-              type="number" min="0" max="360"
+              type="number"
+              min="0"
+              max="360"
               :value="settings.bgAngle"
               @input="settings.bgAngle = $event.target?.value"
             />
@@ -120,6 +109,16 @@ function createSettingsUrl(settings: Settings) {
               @input="settings.fgActiveColor = $event.target?.value"
             />
           </label>
+          <label>
+            <div>{{ tr("OPACITY") }}</div>
+            <input
+              type="number"
+              min="0"
+              max="1"
+              :value="settings.fgActiveOpacity"
+              @input="settings.fgActiveOpacity = $event.target?.value"
+            />
+          </label>
         </div>
 
         <div>
@@ -129,6 +128,16 @@ function createSettingsUrl(settings: Settings) {
               type="color"
               :value="settings.fgDimmedColor"
               @input="settings.fgDimmedColor = $event.target?.value"
+            />
+          </label>
+          <label>
+            <div>{{ tr("OPACITY") }}</div>
+            <input
+              type="number"
+              min="0"
+              max="1"
+              :value="settings.fgDimmedOpacity"
+              @input="settings.fgDimmedOpacity = $event.target?.value"
             />
           </label>
         </div>

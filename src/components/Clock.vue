@@ -51,7 +51,8 @@ function onToggleFullscreen() {
     />
     <SettingsDlg
       :settings="settings"
-      v-model="state.showSettings"
+      :modelValue="!settings.disableSettings && state.showSettings"
+      @update:modelValue="state.showSettings = $event"
       @toggle-fullscreen="onToggleFullscreen()"
     />
   </div>
