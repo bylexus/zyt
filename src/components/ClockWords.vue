@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onBeforeUnmount, onMounted, reactive, ref } from "vue";
 import timeInfo from "../lib/times";
 import { Settings } from "../lib/useSettings";
 
@@ -12,8 +12,21 @@ const emit = defineEmits<{
   (e: "click"): void;
 }>();
 
+const charContainer = ref<HTMLElement | null>(null);
+
 const actTimeInfo = computed(() => {
   return normalizeDate(props.date);
+});
+
+// calc the font size based on the container's width/height:
+// The goal is to fit all the chars in the container
+const containerSize = reactive({ width: 0, height: 0 });
+const fontSize = computed(() => {
+  let minSize = Math.min(
+    containerSize.width / getTimeInfo().words[0].join("").length,
+    containerSize.height / getTimeInfo().words.length
+  );
+  return minSize;
 });
 
 const actStyles = computed(() => {
@@ -25,13 +38,38 @@ const actStyles = computed(() => {
     opacity: props.settings.fgActiveOpacity,
   };
   let dimmedStyle = {
-    fontSize: (100 / timeInfo.words.length) * 0.9 + "vmin",
-    lineHeight: (100 / timeInfo.words.length) * 1 + "vmin",
+    fontSize: fontSize.value * 0.9 + "px",
+    lineHeight: fontSize.value * 1 + "px",
     color: props.settings.fgDimmedColor,
     textShadow: `${props.settings.dimmedShadowX}px ${props.settings.dimmedShadowY}px ${props.settings.dimmedShadowBlur}px ${props.settings.dimmedShadowColor}`,
     opacity: props.settings.fgDimmedOpacity,
   };
   return { actualStyle, dimmedStyle };
+});
+
+
+// We calculate the inner size of the clock container,
+// and watch for size changes:
+let resizeObserver: ResizeObserver | null = null;
+onMounted(() => {
+  resizeObserver = new ResizeObserver(() => {
+    const styles = getComputedStyle(charContainer.value!);
+    containerSize.width =
+      (charContainer.value?.offsetWidth || 0) -
+      parseFloat(styles.paddingLeft) -
+      parseFloat(styles.paddingRight);
+    containerSize.height =
+      (charContainer.value?.offsetHeight || 0) -
+      parseFloat(styles.paddingTop) -
+      parseFloat(styles.paddingBottom);
+  });
+  resizeObserver.observe(charContainer.value!);
+});
+
+onBeforeUnmount(() => {
+  if (resizeObserver) {
+    resizeObserver.disconnect();
+  }
 });
 
 function indexMatch(needleArr, haystack) {
@@ -44,7 +82,7 @@ function indexMatch(needleArr, haystack) {
 }
 
 function getTimeInfo() {
-  return timeInfo[props.settings.lang];
+  return timeInfo[props.settings.lang!];
 }
 
 function normalizeDate(date: Date) {
@@ -101,9 +139,10 @@ function mapLinesToChars(line, lineIndex) {
     @click="emit('click')"
   >
     <div
+      ref="charContainer"
       class="container"
       :style="{
-        fontFamily: props.settings.fontFamily || 'Montserrat'
+        fontFamily: props.settings.fontFamily || 'Montserrat',
       }"
     >
       <div
@@ -130,13 +169,16 @@ function mapLinesToChars(line, lineIndex) {
   height: 100%;
 
   .container {
+    --pTop: 10px;
+    --pBottom: 5px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - var(--pTop) - var(--pBottom));
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: var(--pTop);
+    padding-top: var(--pBottom);
   }
 
   .line {
@@ -147,8 +189,9 @@ function mapLinesToChars(line, lineIndex) {
   }
 
   .char {
+    display: flex;
     flex-grow: 1;
-    text-align: center;
+    justify-content: center;
     align-self: center;
   }
 

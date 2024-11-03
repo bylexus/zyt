@@ -8,12 +8,30 @@
   <title>Zyt - Stylish Clock</title>
   <meta name="Description"
     content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget." />
-  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <link href="./zyt.css" rel="stylesheet" type="text/css" />
+  <style>
+    html,
+    body {
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+    #app {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+
+  <script type="module">
+    import Zyt from './zyt.js';
+    Zyt('#app', 'zyt');
+  </script>
 </body>
 
 </html>

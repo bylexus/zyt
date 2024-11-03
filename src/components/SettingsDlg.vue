@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import useSettings, { Settings, createSettingsUrl } from "../lib/useSettings";
+import { Settings, createSettingsUrl } from "../lib/useSettings";
 import { tr } from "../lib/i18n";
 
-const settings = defineModel<Settings>("settings", { default: useSettings() });
+const settings = defineModel<Settings>("settings", { required: true });
 const show = defineModel<boolean>();
 const emit = defineEmits(["toggle-fullscreen"]);
 </script>
@@ -243,11 +243,12 @@ const emit = defineEmits(["toggle-fullscreen"]);
 .settings-dialog {
   position: absolute;
   top: 0;
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 100vh;
+  opacity: 0;
   background-color: rgba(200, 200, 200, 0.9);
-  transform: translateX(-100%);
-  transition: transform 0.25s ease;
+  transform: translateX(-100vw);
+  transition: transform 0.25s ease, opacity 0.25s ease;
 
   display: grid;
   grid-template-rows: 1fr auto;
@@ -256,6 +257,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
     "buttons";
 
   &.show {
+    opacity: 1;
     transform: translateX(0);
   }
 
@@ -274,10 +276,10 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
 @media screen and (orientation: portrait) {
   .settings-dialog {
-    width: 100%;
-    height: 70%;
-    top: 30%;
-    transform: translateY(100%);
+    width: 100vw;
+    height: 70vh;
+    top: 30vh;
+    transform: translateY(100vh);
     &.show {
       transform: translateY(0);
     }

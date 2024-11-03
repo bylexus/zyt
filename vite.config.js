@@ -1,7 +1,30 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-})
+  define: {
+    // seems to be needed for the browser build
+    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+  },
+  build: {
+    sourcemap: true,
+    lib: {
+      entry: "src/main.ts",
+      name: "zyt",
+      fileName: "zyt",
+      formats: ["es"],
+    },
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css") {
+            return "zyt.css";
+          } else {
+            return assetInfo.name;
+          }
+        },
+      },
+    },
+  },
+});

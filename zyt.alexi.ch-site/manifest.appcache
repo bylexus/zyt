@@ -1,0 +1,124 @@
+CACHE MANIFEST
+
+# Learn more:
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
+
+# -----------------------------------------------------------------------------
+
+# It's necessary to tell web browsers to reconsider this manifest any time the
+# website is updated, and you do so by changing *anything* inside the manifest.
+# A common way to do this is by simply updating a commented-out string, like a
+# date or a version number, or both:
+
+# 2016-08-15:106
+
+# -----------------------------------------------------------------------------
+
+# This is where you define all of the resources to be cached. Add new and/or
+# remove old resourses as needed, keeping each one on its own line. Learn more:
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache#Explicit_entries
+
+CACHE:
+app.js
+index.html
+resources/fonts/Audiowide/Audiowide-regular.eot
+resources/fonts/Audiowide/Audiowide-regular.svg
+resources/fonts/Audiowide/Audiowide-regular.ttf
+resources/fonts/Audiowide/Audiowide-regular.woff
+resources/fonts/Audiowide/Audiowide-regular.woff2
+resources/fonts/Black-Ops-One/Black-Ops-One-regular.eot
+resources/fonts/Black-Ops-One/Black-Ops-One-regular.svg
+resources/fonts/Black-Ops-One/Black-Ops-One-regular.ttf
+resources/fonts/Black-Ops-One/Black-Ops-One-regular.woff
+resources/fonts/Black-Ops-One/Black-Ops-One-regular.woff2
+resources/fonts/Bree-Serif/Bree-Serif-regular.eot
+resources/fonts/Bree-Serif/Bree-Serif-regular.svg
+resources/fonts/Bree-Serif/Bree-Serif-regular.ttf
+resources/fonts/Bree-Serif/Bree-Serif-regular.woff
+resources/fonts/Bree-Serif/Bree-Serif-regular.woff2
+resources/fonts/Bungee-Inline/Bungee-Inline.eot
+resources/fonts/Bungee-Inline/Bungee-Inline.otf
+resources/fonts/Bungee-Inline/Bungee-Inline.woff
+resources/fonts/Bungee-Inline/Bungee-Inline.woff2
+resources/fonts/Crushed/Crushed-regular.eot
+resources/fonts/Crushed/Crushed-regular.svg
+resources/fonts/Crushed/Crushed-regular.ttf
+resources/fonts/Crushed/Crushed-regular.woff
+resources/fonts/Crushed/Crushed-regular.woff2
+resources/fonts/Faster-One/Faster-One-regular.eot
+resources/fonts/Faster-One/Faster-One-regular.svg
+resources/fonts/Faster-One/Faster-One-regular.ttf
+resources/fonts/Faster-One/Faster-One-regular.woff
+resources/fonts/Faster-One/Faster-One-regular.woff2
+resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.eot
+resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.svg
+resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.ttf
+resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.woff
+resources/fonts/Libre-Baskerville/Libre-Baskerville-regular.woff2
+resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.eot
+resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.svg
+resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.ttf
+resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.woff
+resources/fonts/Macondo-Swash-Caps/Macondo-Swash-Caps-regular.woff2
+resources/fonts/Merienda-One/Merienda-One-regular.eot
+resources/fonts/Merienda-One/Merienda-One-regular.svg
+resources/fonts/Merienda-One/Merienda-One-regular.ttf
+resources/fonts/Merienda-One/Merienda-One-regular.woff
+resources/fonts/Merienda-One/Merienda-One-regular.woff2
+resources/fonts/Monoton/Monoton-regular.eot
+resources/fonts/Monoton/Monoton-regular.svg
+resources/fonts/Monoton/Monoton-regular.ttf
+resources/fonts/Monoton/Monoton-regular.woff
+resources/fonts/Monoton/Monoton-regular.woff2
+resources/fonts/Montserrat/Montserrat-regular.eot
+resources/fonts/Montserrat/Montserrat-regular.svg
+resources/fonts/Montserrat/Montserrat-regular.ttf
+resources/fonts/Montserrat/Montserrat-regular.woff
+resources/fonts/Montserrat/Montserrat-regular.woff2
+resources/fonts/Roboto-Mono/Roboto-Mono-regular.eot
+resources/fonts/Roboto-Mono/Roboto-Mono-regular.svg
+resources/fonts/Roboto-Mono/Roboto-Mono-regular.ttf
+resources/fonts/Roboto-Mono/Roboto-Mono-regular.woff
+resources/fonts/Roboto-Mono/Roboto-Mono-regular.woff2
+resources/fonts/Spicy-Rice/Spicy-Rice-regular.eot
+resources/fonts/Spicy-Rice/Spicy-Rice-regular.svg
+resources/fonts/Spicy-Rice/Spicy-Rice-regular.ttf
+resources/fonts/Spicy-Rice/Spicy-Rice-regular.woff
+resources/fonts/Spicy-Rice/Spicy-Rice-regular.woff2
+resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.eot
+resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.svg
+resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.ttf
+resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.woff
+resources/fonts/Stardos-Stencil/Stardos-Stencil-regular.woff2
+resources/fonts/Syncopate/Syncopate-regular.eot
+resources/fonts/Syncopate/Syncopate-regular.svg
+resources/fonts/Syncopate/Syncopate-regular.ttf
+resources/fonts/Syncopate/Syncopate-regular.woff
+resources/fonts/Syncopate/Syncopate-regular.woff2
+resources/fonts/Ubuntu/Ubuntu-regular.eot
+resources/fonts/Ubuntu/Ubuntu-regular.svg
+resources/fonts/Ubuntu/Ubuntu-regular.ttf
+resources/fonts/Ubuntu/Ubuntu-regular.woff
+resources/fonts/Ubuntu/Ubuntu-regular.woff2
+resources/fonts/Ultra/Ultra-regular.eot
+resources/fonts/Ultra/Ultra-regular.svg
+resources/fonts/Ultra/Ultra-regular.ttf
+resources/fonts/Ultra/Ultra-regular.woff
+resources/fonts/Ultra/Ultra-regular.woff2
+resources/fonts/Wallpoet/Wallpoet-regular.eot
+resources/fonts/Wallpoet/Wallpoet-regular.svg
+resources/fonts/Wallpoet/Wallpoet-regular.ttf
+resources/fonts/Wallpoet/Wallpoet-regular.woff
+resources/fonts/Wallpoet/Wallpoet-regular.woff2
+styles/styles.css
+
+# -----------------------------------------------------------------------------
+
+# Resources that must be retrieved from the network. The wild card ensures any
+# resource not listed in the cache above will instead be downloaded from the
+# network. Learn more:
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache#Network_entries
+
+NETWORK:
+*
+

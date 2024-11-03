@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, reactive, ref, watch } from "vue";
 import ClockWords from "./ClockWords.vue";
-import useSettings from "../lib/useSettings";
+import { Settings } from "../lib/useSettings";
 import SettingsDlg from "./SettingsDlg.vue";
 
-const settings = useSettings();
+const props = defineProps<{
+  settings: Settings;
+}>();
 
 const state = reactive({
   date: new Date(),
