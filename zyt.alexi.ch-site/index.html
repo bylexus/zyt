@@ -8,23 +8,9 @@
   <title>Zyt - Stylish Clock</title>
   <meta name="Description"
     content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget." />
+  <meta name="author" content="alex alex@alexi.ch" />
   <link href="./zyt.css" rel="stylesheet" type="text/css" />
   <link href="./site.css" rel="stylesheet" type="text/css" />
-  <style>
-    html,
-    body {
-      box-sizing: border-box;
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #app {
-      height: 100vh;
-      width: 100vw;
-    }
-  </style>
 </head>
 
 <body>
@@ -32,8 +18,12 @@
 
   <script type="module">
     import Zyt from './zyt.js';
-    Zyt('#app', 'zyt', {
+
+    const params = queryParams() || {};
+
+    Zyt('#app', 'zyt.alexi.ch', {
       clockSettings: {
+        ...params,
         disableSettings: false
       },
       fonts:
@@ -61,6 +51,22 @@
           { displayName: "Wallpoet", fontFamily: "Wallpoet" },
         ]
     });
+
+    function queryParams() {
+      const params = location.search.replace(/^\?/, "").split("&").map((str) => {
+        const parts = str.split("=");
+        return {
+          key: decodeURIComponent(parts[0]),
+          value: decodeURIComponent(parts[1]),
+        };
+      });
+
+      const obj = {};
+      for (const param of params) {
+        obj[param.key] = param.value;
+      }
+      return obj;
+    }
   </script>
 </body>
 

@@ -84,25 +84,7 @@ The clock knows the following parameters:
   * `bern`: Swiss German dialect around Bern
   * `deutsch_std`: German
   * `english_std`: English
-* `fontFamily`: The CSS Font family name, including the following embedded ones (Note to url-encode spaces `%20`):
-  * Audiowide
-  * Black Ops One
-  * Bree Serif
-  * Bungee Inline
-  * Crushed
-  * Faster One
-  * Libre Baskerville
-  * Macondo Swash Caps
-  * Merienda One
-  * Monoton
-  * Montserrat
-  * Roboto Mono
-  * Spicy Rice
-  * Stardos Stencil
-  * Syncopate
-  * Ubuntu
-  * Ultra
-  * Wallpoet
+* `fontFamily`: The CSS Font family name, including the following embedded ones (Note to url-encode spaces `%20`)
 * `upperCase`: Set `upperCase=1` to have upper cased characters, `upperCase=` (no value) for lower case chars
 * `disableSettings`: Set `disableSettings=1` to disable the style menu functionality. Useful if you use it as web site widget.
 * `clickUrl`: Set `clickUrl` to a web site (e.g. `clickUrl=https://zyt.alexi.ch`) to open the link instead of the settings dialog. Overrides `disableSettings`.
@@ -150,4 +132,4 @@ All fonts are from Google Fonts. To make Web Font download easier, I used this s
 * use free fonts - not sure if google fonts are free to embed
 * choose different zime zone relative to the actual one
 * update actual zyt.alexi.ch with new version
-* zyt.alexi.ch: support url parameters as before
+* ~~zyt.alexi.ch: support url parameters as before~~
