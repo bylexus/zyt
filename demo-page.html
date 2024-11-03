@@ -9,13 +9,14 @@
   <meta name="Description"
     content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget." />
   <link href="./dist/zyt.css" rel="stylesheet" type="text/css" />
+  <link href="zyt.alexi.ch-site/fonts.css" rel="stylesheet" type="text/css" />
   <style>
-    html,
     body {
       box-sizing: border-box;
       width: 100vw;
       height: 100vh;
       margin: 0;
+      padding: 10px;
       overflow: auto;
     }
 
@@ -24,37 +25,66 @@
       background-color: white;
     }
 
-    #app1,
-    #app2,
-    #app3,
-    #app4 {
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 0;
+    .clock-grid {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 400px;
     }
   </style>
 </head>
 
 <body>
   <h1>Zyt - Stylish Clock - Demos</h1>
-  <div style="padding: 10px;height: 400px; display: flex;gap: 10px;">
+  <div class="clock-grid">
     <div id="app1"></div>
     <div id="app2"></div>
-  </div>
-  <div style="padding: 10px;height: 400px; display: flex;gap: 10px;">
     <div id="app3"></div>
     <div id="app4"></div>
   </div>
 
   <script type="module">
     import Zyt from './dist/zyt.js';
+    const fonts = [
+      { displayName: "Audiowide", fontFamily: "Audiowide" },
+      { displayName: "Black Ops One", fontFamily: "Black Ops One" },
+      { displayName: "Bree Serif", fontFamily: "Bree Serif" },
+      { displayName: "Bungee Inline", fontFamily: "Bungee Inline" },
+      { displayName: "Crushed", fontFamily: "Crushed" },
+      { displayName: "Faster One", fontFamily: "Faster One" },
+      { displayName: "Libre Baskerville", fontFamily: "Libre Baskerville" },
+      { displayName: "Macondo Swash Caps", fontFamily: "Macondo Swash Caps" },
+      { displayName: "Merienda One", fontFamily: "Merienda One" },
+      { displayName: "monospace", fontFamily: "monospace" },
+      { displayName: "Monoton", fontFamily: "Monoton" },
+      { displayName: "Montserrat", fontFamily: "Montserrat" },
+      { displayName: "Roboto Mono", fontFamily: "Roboto Mono" },
+      { displayName: "sans-serif", fontFamily: "sans-serif" },
+      { displayName: "serif", fontFamily: "serif" },
+      { displayName: "Spicy Rice", fontFamily: "Spicy Rice" },
+      { displayName: "Stardos Stencil", fontFamily: "Stardos Stencil" },
+      { displayName: "Syncopate", fontFamily: "Syncopate" },
+      { displayName: "Ubuntu", fontFamily: "Ubuntu" },
+      { displayName: "Ultra", fontFamily: "Ultra" },
+      { displayName: "Wallpoet", fontFamily: "Wallpoet" },
+    ];
+
     Zyt('#app1', 'clock1', {
-      disableSettings: true,
-      bgColor1: '#333',
+      clockSettings: { "bgColor1": "#225d59", "bgColor2": "#08052e", "bgAngle": "135", "fgDimmedColor": "#333333", "fgDimmedOpacity": "0.3", "fgActiveColor": "#ffffff", "fgActiveOpacity": "1", "activeShadowX": "0", "activeShadowY": "0", "activeShadowBlur": "9", "activeShadowColor": "#cccccc", "dimmedShadowX": "0", "dimmedShadowY": "0", "dimmedShadowBlur": "0", "dimmedShadowColor": "#000000", "keepScreenActive": false, "lang": "zueri", "fontFamily": "Bree Serif", "upperCase": true, "disableSettings": true, "clickUrl": null },
+      fonts: fonts,
     });
-    Zyt('#app2', 'clock2');
-    Zyt('#app3', 'clock3');
-    Zyt('#app4', 'clock4');
+    Zyt('#app2', 'clock2', {
+      clockSettings: { "bgColor1": "#012345", "bgColor2": "#ee2f2f", "bgAngle": "135", "fgDimmedColor": "#333333", "fgDimmedOpacity": "1", "fgActiveColor": "#ffffff", "fgActiveOpacity": "1", "activeShadowX": "0", "activeShadowY": "0", "activeShadowBlur": "9", "activeShadowColor": "#cccccc", "dimmedShadowX": "0", "dimmedShadowY": "0", "dimmedShadowBlur": "0", "dimmedShadowColor": "#000000", "keepScreenActive": false, "lang": "bern", "fontFamily": "Spicy Rice", "upperCase": false, "disableSettings": true, "clickUrl": null },
+      fonts: fonts
+    });
+    Zyt('#app3', 'clock3', {
+      clockSettings: { "bgColor1": "#e2d5d5", "bgColor2": "#edb92c", "bgAngle": "0", "fgDimmedColor": "#333333", "fgDimmedOpacity": "0.2", "fgActiveColor": "#ffffff", "fgActiveOpacity": "1", "activeShadowX": "0", "activeShadowY": "0", "activeShadowBlur": "2", "activeShadowColor": "#222020", "dimmedShadowX": "0", "dimmedShadowY": "0", "dimmedShadowBlur": "0", "dimmedShadowColor": "#000000", "keepScreenActive": false, "lang": "deutsch_std", "fontFamily": "Syncopate", "upperCase": true, "disableSettings": true, "clickUrl": null },
+      fonts: fonts
+    });
+    Zyt('#app4', 'clock4', {
+      clockSettings: { "bgColor1": "#000000", "bgColor2": "#000000", "bgAngle": "0", "fgDimmedColor": "#333333", "fgDimmedOpacity": "0.4", "fgActiveColor": "#000000", "fgActiveOpacity": "1", "activeShadowX": "0", "activeShadowY": "0", "activeShadowBlur": "10", "activeShadowColor": "#ffffff", "dimmedShadowX": "0", "dimmedShadowY": "0", "dimmedShadowBlur": "0", "dimmedShadowColor": "#000000", "keepScreenActive": false, "lang": "english_std", "fontFamily": "Faster One", "upperCase": true, "disableSettings": true, "clickUrl": null },
+      fonts: fonts
+    });
   </script>
 </body>
 

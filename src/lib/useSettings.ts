@@ -42,7 +42,7 @@ const defaultSettings: Settings = {
   dimmedShadowColor: "#000000",
   keepScreenActive: false,
   lang: "zueri",
-  fontFamily: "Montserrat",
+  fontFamily: "sans-serif",
   upperCase: true,
   disableSettings: false,
   clickUrl: null,
@@ -61,6 +61,12 @@ export function createSettingsUrl(settings: Settings): string {
   return `${base}?${query}`;
 }
 
+export function createSettingsJson(settings: Settings): string {
+  const jsonString = JSON.stringify(settings);
+  const blob = new Blob([jsonString], { type: "application/json" });
+  return URL.createObjectURL(blob);
+}
+
 function storeSettings(clockId: string, settings) {
   localStorage.setItem(`zyt-${clockId}`, JSON.stringify(settings));
 }
@@ -69,16 +75,20 @@ function storeSettings(clockId: string, settings) {
  * Returns a new reactive Settings object for a given clock id.
  * Note that each call to useSettings() emits a new settings instance,
  * so please make sure to keep a reference to the returned object and pass it around.
- * 
- * @param clockId 
- * @param initialSettings 
- * @returns 
+ *
+ * @param clockId
+ * @param initialSettings
+ * @returns
  */
-export default function useSettings(clockId: string = "default", initialSettings: Settings = {}) {
+export default function useSettings(
+  clockId: string = "default",
+  initialSettings: Settings = {}
+) {
   const settingsRef = reactive({
     ...defaultSettings,
     // override defaults with local storage items:
-    ...(JSON.parse(window.localStorage.getItem(`zyt-${clockId}`) || "{}") || {}),
+    ...(JSON.parse(window.localStorage.getItem(`zyt-${clockId}`) || "{}") ||
+      {}),
     // override defaults with Query Param items:
     // ...queryString.parse(location.search),
     // override defaults with initial settings:

@@ -1,14 +1,14 @@
 const words = [
   // 12 chars per line
-  ["It's", "a", "twenty", "."],
+  ["It's", "a", "twenty","q"],
   ["ov", "ten", "m", "five", "ra"],
   ["a", "v", "quarter", "b", "to"],
   ["half", "kl", "past", "pj"],
   ["one", "two", "three", "g"],
   ["four", "pm", "five", "ta"],
   ["six", "p", "seven", "ten"],
-  ["eight", "ru", "nine", "w"],
-  ["eleven", "twelve"],
+  ["eleven", "ru", "nine"],
+  ["eight", "twelve", "."],
 ];
 
 const times = {
@@ -74,10 +74,10 @@ const times = {
     5: [[5, 2]],
     6: [[6, 0]],
     7: [[6, 2]],
-    8: [[7, 0]],
+    8: [[8, 0]],
     9: [[7, 2]],
     10: [[6, 3]],
-    11: [[8, 0]],
+    11: [[7, 0]],
   },
 };
 

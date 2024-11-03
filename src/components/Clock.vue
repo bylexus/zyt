@@ -3,9 +3,11 @@ import { onBeforeUnmount, onMounted, reactive, ref, watch } from "vue";
 import ClockWords from "./ClockWords.vue";
 import { Settings } from "../lib/useSettings";
 import SettingsDlg from "./SettingsDlg.vue";
+import { FontInfo } from "../lib/useFonts";
 
 const props = defineProps<{
   settings: Settings;
+  fonts: FontInfo[];
 }>();
 
 const state = reactive({
@@ -53,6 +55,7 @@ function onToggleFullscreen() {
     />
     <SettingsDlg
       :settings="settings"
+      :fonts="fonts"
       :modelValue="!settings.disableSettings && state.showSettings"
       @update:modelValue="state.showSettings = $event"
       @toggle-fullscreen="onToggleFullscreen()"
@@ -61,8 +64,8 @@ function onToggleFullscreen() {
 </template>
 
 <style lang="css" scoped>
-  .container {
-    width: 100%;
-    height: 100%;
-  }
+.container {
+  width: 100%;
+  height: 100%;
+}
 </style>

@@ -1,9 +1,11 @@
 export default {
     'ANGLE': 'Angle',
-    'BACKGROUND': 'Background',
+    'BACKGROUND_GRADIENT': 'Background gradient',
     'BLUR': 'blur',
+    'CLOCK_JSON': 'JSON params',
     'CLOCK_URL': 'Link for this clock',
     'CLOSE': 'close',
+    'COLOR': 'Color',
     'FG_ACTIVE': 'FG active',
     'FG_ACTIVE_SHADOW': 'FG active shadow',
     'FG_DIMMED': 'FG dimmed',
@@ -13,6 +15,7 @@ export default {
     'KEEP_SCREEN_ON': 'Keep screen on',
     'LANG': 'Lang',
     'OPACITY': 'Opacity',
+    'SETTINGS': 'Settings',
     'TOGGLE_FULLSCREEN': 'Toggle Full Screen',
     'UPPERCASE': 'Uppercase'
 };

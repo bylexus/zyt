@@ -9,6 +9,7 @@
   <meta name="Description"
     content="Eine stylische Uhr, welche die Zeit in Worten anzeigt. Ideal als Wand-Panel oder Webseiten-Widget." />
   <link href="./zyt.css" rel="stylesheet" type="text/css" />
+  <link href="./site.css" rel="stylesheet" type="text/css" />
   <style>
     html,
     body {
@@ -18,6 +19,7 @@
       margin: 0;
       overflow: hidden;
     }
+
     #app {
       height: 100vh;
       width: 100vw;
@@ -30,7 +32,35 @@
 
   <script type="module">
     import Zyt from './zyt.js';
-    Zyt('#app', 'zyt');
+    Zyt('#app', 'zyt', {
+      clockSettings: {
+        disableSettings: false
+      },
+      fonts:
+        [
+          { displayName: "Audiowide", fontFamily: "Audiowide" },
+          { displayName: "Black Ops One", fontFamily: "Black Ops One" },
+          { displayName: "Bree Serif", fontFamily: "Bree Serif" },
+          { displayName: "Bungee Inline", fontFamily: "Bungee Inline" },
+          { displayName: "Crushed", fontFamily: "Crushed" },
+          { displayName: "Faster One", fontFamily: "Faster One" },
+          { displayName: "Libre Baskerville", fontFamily: "Libre Baskerville" },
+          { displayName: "Macondo Swash Caps", fontFamily: "Macondo Swash Caps" },
+          { displayName: "Merienda One", fontFamily: "Merienda One" },
+          { displayName: "monospace", fontFamily: "monospace" },
+          { displayName: "Monoton", fontFamily: "Monoton" },
+          { displayName: "Montserrat", fontFamily: "Montserrat" },
+          { displayName: "Roboto Mono", fontFamily: "Roboto Mono" },
+          { displayName: "sans-serif", fontFamily: "sans-serif" },
+          { displayName: "serif", fontFamily: "serif" },
+          { displayName: "Spicy Rice", fontFamily: "Spicy Rice" },
+          { displayName: "Stardos Stencil", fontFamily: "Stardos Stencil" },
+          { displayName: "Syncopate", fontFamily: "Syncopate" },
+          { displayName: "Ubuntu", fontFamily: "Ubuntu" },
+          { displayName: "Ultra", fontFamily: "Ultra" },
+          { displayName: "Wallpoet", fontFamily: "Wallpoet" },
+        ]
+    });
   </script>
 </body>
 
