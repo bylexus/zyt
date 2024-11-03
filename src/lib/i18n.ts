@@ -4,35 +4,25 @@ import strings_en from "../localizations/strings_en";
 let lang = "en";
 let strings = {};
 
-export function init() {
-  // Use browser-language
-  let language = navigator.language || "";
-  language = language.replace(/-.*/, ""); // strip away everything behind the language part
-  if (language) {
-    lang = language;
-  } else {
-    setDefaultLanguage();
-  }
-  initStrings();
+// Use browser-language, and init strings
+let language = navigator.language || "";
+language = language.replace(/-.*/, ""); // strip away everything behind the language part
+if (language) {
+  lang = language;
+} else {
+  lang = "en";
+}
+switch (lang) {
+  case "de":
+    strings = strings_de;
+    break;
+  default:
+    strings = strings_en;
+    break;
 }
 
 export function getLang() {
   return lang;
-}
-
-function setDefaultLanguage() {
-  lang = "en";
-}
-
-function initStrings() {
-  switch (lang) {
-    case "de":
-      strings = strings_de;
-      break;
-    default:
-      strings = strings_en;
-      break;
-  }
 }
 
 export function tr(key) {

@@ -85,6 +85,7 @@ export default function useSettings(clockId: string = "default", initialSettings
     ...initialSettings,
   });
 
+  // On settings change, store in local storage:
   watch(
     settingsRef,
     (newSettings) => {

@@ -241,8 +241,9 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
 <style lang="css" scoped>
 .settings-dialog {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 50vw;
   height: 100vh;
   opacity: 0;
