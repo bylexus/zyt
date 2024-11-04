@@ -45,13 +45,21 @@ function onToggleFullscreen() {
     }
   }
 }
+
+function onClockClick() {
+  if (props.settings.clickUrl) {
+    window.open(props.settings.clickUrl);
+  } else {
+    state.showSettings = !state.showSettings;
+  }
+}
 </script>
 <template>
   <div class="container" ref="clockElement">
     <ClockWords
       :date="state.date"
       :settings="settings"
-      @click="state.showSettings = !state.showSettings"
+      @click="onClockClick()"
     />
     <SettingsDlg
       :settings="settings"

@@ -125,11 +125,11 @@ All fonts are from Google Fonts. To make Web Font download easier, I used this s
 
 # TODO
 
-* style the settings panel
+* style the settings panel (status: sort of...)
 * ~~export json params~~
-* (re-)implement `clickUrl` parameter
+* ~~(re-)implement `clickUrl` parameter~~
 * (re-)implement screen keep-on, using Web API
 * use free fonts - not sure if google fonts are free to embed
 * choose different zime zone relative to the actual one
-* update actual zyt.alexi.ch with new version
+* ~~update actual zyt.alexi.ch with new version~~
 * ~~zyt.alexi.ch: support url parameters as before~~
