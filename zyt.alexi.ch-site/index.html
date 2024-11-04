@@ -24,7 +24,6 @@
     Zyt('#app', 'zyt.alexi.ch', {
       clockSettings: {
         ...params,
-        disableSettings: false
       },
       fonts:
         [
@@ -63,8 +62,11 @@
 
       const obj = {};
       for (const param of params) {
-        obj[param.key] = param.value;
+        if (param.key) {
+          obj[param.key] = param.value;
+        }
       }
+      console.log(obj);
       return obj;
     }
   </script>

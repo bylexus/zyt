@@ -5,7 +5,8 @@
   "scripts": {
     "build": "vite build",
     "watch": "vite build --watch --mode development",
-    "build-site": "npm run build && cp dist/* zyt.alexi.ch-site/"
+    "build-site": "npm run build && cp dist/* zyt.alexi.ch-site/",
+    "build-site-docker": "docker build -t registry.alexi.ch/zyt.alexi.ch -f Dockerfile-zyt.alexi.ch ."
   },
   "dependencies": {
     "vue": "^3.5.12"

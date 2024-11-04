@@ -1,0 +1,16 @@
+services:
+  web:
+    build:
+        dockerfile: Dockerfile-zyt.alexi.ch
+    networks:
+        - zyt.alexi.ch
+    restart: always
+    expose:
+        - 80
+    environment:
+        - VIRTUAL_HOST=zyt.alexi.ch
+        - LETSENCRYPT_HOST=zyt.alexi.ch
+        - LETSENCRYPT_EMAIL=info@alexi.ch
+networks:
+    zyt.alexi.ch:
+        external: true

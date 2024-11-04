@@ -51,11 +51,15 @@ const defaultSettings: Settings = {
 export function createSettingsUrl(settings: Settings): string {
   let query = Object.keys(settings)
     .map((key) => {
+      if (!key) {
+        return null;
+      }
       let value = settings[key];
       return `${key}=${
         value === false || value === null ? "" : encodeURIComponent(value)
       }`;
     })
+    .filter(Boolean)
     .join("&");
   let base = location.href.replace(/\?.*/, "");
   return `${base}?${query}`;
