@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "NODE_ENV=production vite build --mode production",
     "watch": "vite build --watch --mode development",
     "build-site": "npm run build && cp dist/* zyt.alexi.ch-site/",
     "build-site-docker": "docker build -t registry.alexi.ch/zyt.alexi.ch -f Dockerfile-zyt.alexi.ch ."

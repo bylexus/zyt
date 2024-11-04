@@ -1,7 +1,8 @@
 services:
   web:
     build:
-        dockerfile: Dockerfile-zyt.alexi.ch
+        context: .
+        dockerfile: nginx-zyt.alexi.ch/Dockerfile
     networks:
         - zyt.alexi.ch
     restart: always
