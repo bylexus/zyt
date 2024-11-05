@@ -8,7 +8,7 @@ _Zyt_ is a app showing the actual time as it is spoken - 03:45 becomes "a quarte
 Features
 -----------
 
-* Available on the web and as JS Library
+* Available on the web and as JS Library (ES Module)
 * Shows the time in words in different languages. Supported languages for now (more translations are welcome!):
   * Züri-Düütsch - a Swiss German dialect around Zurich
   * Bern-Düütsch - a Swiss German dialect around Bern
@@ -24,15 +24,16 @@ Features
 
 Some screens:
 
-![First Screenshot](./2016-08-08-u07ny.png)
-![2nd Screenshot](./2016-08-10-9d9fa.png)
+![Example clock](./clock-example-3.png)
+![Example clock](./clock-example-4.png)
+![Example clock](./clock-example-5.png)
+![Example clock](./clock-example-6.png)
 
 ## Configure your own clock
 
 Head to <https://zyt.alexi.ch/> and click in the clock to configure your own clock. The settigs are
 stored in your browser's local storage. You can even generate a link (in the settings panel) with all the
 settings to share your clock with other people.
-
 
 ## Embed it into your web page!
 
@@ -49,16 +50,21 @@ You can use URL parameters to style the embedded clock. An example:
 ```html
 <iframe src="https://zyt.alexi.ch/?bgColor1=%23990000&fgActiveColor=%23ff0000&activeShadowColor=rgba(55,255,0,0.8)" width="400" height="300" style="border:none" ></iframe>
 ```
-generates:
-
-<iframe src="https://zyt.alexi.ch/?bgColor1=%23990000&fgActiveColor=%23ff0000&activeShadowColor=rgba(55,255,0,0.8)" width="400" height="300" style="border:none" ></iframe>
-
 
 *NOTE* that you have to URL-encode CSS Color values in the form `#aabbcc` to `%23aabbcc` to form a correct url.
 
-The easiest way is to generate a Link via the settings panel.
+The easiest way is to generate a Link via the settings panel: Just click in the clock page to open the settings panel,
+change the settings to your liking, and click the "Generate Link" button: The generated link can directly be used as an iframe source.
 
 ## Use the clock as a JS library
+
+### as ES module: from zyt.alexi.ch
+
+### as JS libary
+
+### Provide additional fonts
+
+### supported clock settings
 
 // TODO
 

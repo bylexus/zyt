@@ -245,12 +245,12 @@ const emit = defineEmits(["toggle-fullscreen"]);
   position: fixed;
   top: 0;
   left: 0;
-  width: 50vw;
-  height: 100vh;
+  width: 50dvw;
+  height: 100dvh;
   overflow: auto;
   opacity: 0;
   background-color: rgba(200, 200, 200, 0.95);
-  transform: translateX(-100vw);
+  transform: translateX(-100dvw);
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   display: grid;
@@ -295,10 +295,10 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
 @media screen and (orientation: portrait) {
   .settings-dialog {
-    width: 100vw;
-    height: 70vh;
-    top: 30vh;
-    transform: translateY(100vh);
+    width: 100dvw;
+    height: 70dvh;
+    top: 30dvh;
+    transform: translateY(100dvh);
     &.show {
       transform: translateY(0);
     }
