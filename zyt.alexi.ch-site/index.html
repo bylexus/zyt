@@ -54,10 +54,16 @@
     function queryParams() {
       const params = location.search.replace(/^\?/, "").split("&").map((str) => {
         const parts = str.split("=");
-        return {
+        const settingObj= {
           key: decodeURIComponent(parts[0]),
           value: decodeURIComponent(parts[1]),
         };
+        try {
+          settingObj.value = JSON.parse(settingObj.value);
+        } catch (e) {
+          // ignore
+        }
+        return settingObj;
       });
 
       const obj = {};
@@ -66,7 +72,6 @@
           obj[param.key] = param.value;
         }
       }
-      console.log(obj);
       return obj;
     }
   </script>

@@ -1,6 +1,8 @@
 export default {
     'ANGLE': 'Angle',
+    'BACKGROUND': 'Background',
     'BACKGROUND_GRADIENT': 'Background gradient',
+    'GRADIENT': 'Gradient',
     'BLUR': 'blur',
     'CLOCK_JSON': 'JSON params',
     'CLOCK_URL': 'Link for this clock',

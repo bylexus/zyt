@@ -1,7 +1,12 @@
 <script lang="ts" setup>
-import { Settings, createSettingsUrl, createSettingsJson } from "../lib/useSettings";
+import {
+  Settings,
+  createSettingsUrl,
+  createSettingsJson,
+} from "../lib/useSettings";
 import { tr } from "../lib/i18n";
 import { FontInfo } from "../lib/useFonts";
+import BackgroundTypeSelect from "./BackgroundTypeSelect.vue";
 
 const props = defineProps<{ fonts: FontInfo[] }>();
 
@@ -21,7 +26,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
       <!-- Sprache -->
       <div class="field">
         <label>
-          <div>{{ tr("LANG") }}</div>
+          <div class="title">{{ tr("LANG") }}</div>
           <select
             :value="settings.lang"
             @change="settings.lang = $event.target?.value"
@@ -37,7 +42,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
       <!-- Schrift -->
       <div class="field">
         <label>
-          <div>{{ tr("FONT") }}</div>
+          <div class="title">{{ tr("FONT") }}</div>
           <select
             :value="settings.fontFamily"
             @change="settings.fontFamily = $event.target?.value"
@@ -61,40 +66,22 @@ const emit = defineEmits(["toggle-fullscreen"]);
             :checked="settings.upperCase"
             @change="settings.upperCase = $event.target?.checked === true"
           />
-          <span>{{ tr("UPPERCASE") }}</span>
+          <span class="title">{{ tr("UPPERCASE") }}</span>
         </label>
       </div>
 
       <!-- Colors -->
       <div class="field">
-        <label>
-          <div>{{ tr("BACKGROUND_GRADIENT") }}</div>
-          <input
-            type="color"
-            :value="settings.bgColor1"
-            @input="settings.bgColor1 = $event.target?.value"
+          <div class="title">{{ tr("BACKGROUND") }}</div>
+          <BackgroundTypeSelect
+            :backgroundSetting="settings.background"
+            @settings-changed="settings.background = $event"
           />
-          <input
-            type="color"
-            :value="settings.bgColor2"
-            @input="settings.bgColor2 = $event.target?.value"
-          />
-        </label>
-        <label style="margin-left: 5px">
-          <span>{{ tr("ANGLE") }}: </span>
-          <input
-            type="number"
-            min="0"
-            max="360"
-            :value="settings.bgAngle"
-            @input="settings.bgAngle = $event.target?.value"
-          />
-        </label>
       </div>
 
       <div class="field">
         <label>
-          <div>{{ tr("FG_ACTIVE") }}</div>
+          <div class="title">{{ tr("FG_ACTIVE") }}</div>
           <input
             type="color"
             :value="settings.fgActiveColor"
@@ -115,7 +102,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
       <div class="field">
         <label>
-          <div>{{ tr("FG_DIMMED") }}</div>
+          <div class="title">{{ tr("FG_DIMMED") }}</div>
           <input
             type="color"
             :value="settings.fgDimmedColor"
@@ -136,7 +123,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
       <!-- fg active shadow -->
       <fieldset class="field">
-        <legend>{{ tr("FG_ACTIVE_SHADOW") }}</legend>
+        <legend class="title">{{ tr("FG_ACTIVE_SHADOW") }}</legend>
         <div style="display: flex; flex-direction: column">
           <label>
             <div>dX:</div>
@@ -176,7 +163,7 @@ const emit = defineEmits(["toggle-fullscreen"]);
 
       <!-- fg dimmed shadow -->
       <fieldset class="field">
-        <legend>{{ tr("FG_DIMMED_SHADOW") }}</legend>
+        <legend class="title">{{ tr("FG_DIMMED_SHADOW") }}</legend>
         <div>
           <label>
             <div>dX:</div>
@@ -269,7 +256,16 @@ const emit = defineEmits(["toggle-fullscreen"]);
     grid-area: content;
 
     .field {
+      border-top: 1px solid #aaa;
+      padding-top: 0.25rem;
       margin-bottom: 1em;
+      font-size: 0.825rem;
+      .title {
+        font-weight: bold;
+      }
+    }
+    input {
+      min-width: 80px;
     }
     fieldset {
       border: 1px solid grey;

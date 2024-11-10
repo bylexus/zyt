@@ -36,7 +36,6 @@ onBeforeUnmount(() => {
 });
 
 function onToggleFullscreen() {
-  console.log("fullscreen", clockElement.value);
   if (clockElement.value?.requestFullscreen) {
     if (document.fullscreenElement) {
       document.exitFullscreen();
@@ -49,7 +48,7 @@ function onToggleFullscreen() {
 function onClockClick() {
   if (props.settings.clickUrl) {
     window.open(props.settings.clickUrl);
-  } else {
+  } else if (!props.settings.disableSettings) {
     state.showSettings = !state.showSettings;
   }
 }

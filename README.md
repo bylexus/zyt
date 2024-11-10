@@ -139,3 +139,6 @@ All fonts are from Google Fonts. To make Web Font download easier, I used this s
 * choose different zime zone relative to the actual one
 * ~~update actual zyt.alexi.ch with new version~~
 * ~~zyt.alexi.ch: support url parameters as before~~
+* Saving presets
+* shadow layers (multiple shadows for text)
+* image backgrounds (including rotation/moving animation). use-case: moving starfield background

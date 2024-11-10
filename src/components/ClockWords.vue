@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, reactive, ref } from "vue";
 import timeInfo from "../lib/times";
-import { Settings } from "../lib/useSettings";
+import { Gradient, Settings } from "../lib/useSettings";
 
 const props = defineProps<{
   settings: Settings;
@@ -44,6 +44,30 @@ const actStyles = computed(() => {
     opacity: props.settings.fgDimmedOpacity,
   };
   return { actualStyle, dimmedStyle };
+});
+
+const backgroundStyle = computed(() => {
+  const bgConfig = props.settings.background;
+  let ret = {};
+  if (bgConfig?.type === "color") {
+    ret = {
+      backgroundColor: bgConfig.color,
+    };
+  } else if (bgConfig?.type === "gradient") {
+    const colorStops = bgConfig.colors.map(
+      (c) => `${c.color} ${c.offset ? String(c.offset) + "%" : ""}`
+    );
+    ret = {
+      backgroundImage: `linear-gradient(${
+        bgConfig.angle || "0"
+      }deg, ${colorStops.join(",")})`,
+    };
+  } else {
+    ret = {
+      backgroundColor: "#000000",
+    };
+  }
+  return ret;
 });
 
 // We calculate the inner size of the clock container,
@@ -132,8 +156,7 @@ function mapLinesToChars(line, lineIndex) {
   <div
     class="clock-words"
     :style="{
-      backgroundColor: props.settings.bgColor1,
-      backgroundImage: `linear-gradient(${props.settings.bgAngle}deg, ${props.settings.bgColor1}, ${props.settings.bgColor2})`,
+      ...backgroundStyle,
     }"
     @click="emit('click')"
   >
@@ -192,6 +215,7 @@ function mapLinesToChars(line, lineIndex) {
     flex-grow: 1;
     justify-content: center;
     align-self: center;
+    user-select: none;
   }
 
   .pulse {

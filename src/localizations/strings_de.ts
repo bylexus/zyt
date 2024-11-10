@@ -1,6 +1,8 @@
 export default {
     'ANGLE': 'Winkel',
+    'BACKGROUND': 'Hintergrund',
     'BACKGROUND_GRADIENT': 'Hintergrund-Verlauf',
+    'GRADIENT': 'Verlauf',
     'BLUR': 'blur',
     'CLOCK_JSON': 'JSON-Parameter',
     'CLOCK_URL': 'Link zu dieser Uhr',

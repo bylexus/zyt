@@ -1,9 +1,20 @@
-import { reactive, watch } from "vue";
+import { reactive, toValue, watch } from "vue";
+
+export type Background = ColorBackground | GradientBackground;
+
+export type ColorBackground = {
+  type: "color";
+  color: string;
+};
+
+export type GradientBackground = {
+  type: "gradient";
+  angle: number;
+  colors: Array<{ color: string; offset: number }>;
+};
 
 export type Settings = {
-  bgColor1?: string;
-  bgColor2?: string;
-  bgAngle?: string;
+  background?: Background;
   fgDimmedColor?: string;
   fgDimmedOpacity?: string;
   fgActiveColor?: string;
@@ -25,17 +36,22 @@ export type Settings = {
 };
 
 const defaultSettings: Settings = {
-  bgColor1: "#000000",
-  bgColor2: "#000000",
-  bgAngle: "0",
-  fgDimmedColor: "#333333",
-  fgDimmedOpacity: "1",
+  background: {
+    type: "gradient",
+    angle: 135,
+    colors: [
+      { color: "#225d59", offset: 0 },
+      { color: "#000000", offset: 100 },
+    ],
+  },
+  fgDimmedColor: "#0e6261",
+  fgDimmedOpacity: "0.3",
   fgActiveColor: "#ffffff",
   fgActiveOpacity: "1",
   activeShadowX: "0",
   activeShadowY: "0",
-  activeShadowBlur: "9",
-  activeShadowColor: "#cccccc",
+  activeShadowBlur: "10",
+  activeShadowColor: "#ffffff",
   dimmedShadowX: "0",
   dimmedShadowY: "0",
   dimmedShadowBlur: "0",
@@ -55,9 +71,14 @@ export function createSettingsUrl(settings: Settings): string {
         return null;
       }
       let value = settings[key];
-      return `${key}=${
-        value === false || value === null ? "" : encodeURIComponent(value)
-      }`;
+      if (!value) {
+        value = "";
+      } else if (typeof value === "string") {
+        value = value;
+      } else {
+        value = JSON.stringify(value);
+      }
+      return `${key}=${encodeURIComponent(value)}`;
     })
     .filter(Boolean)
     .join("&");
@@ -72,6 +93,7 @@ export function createSettingsJson(settings: Settings): string {
 }
 
 function storeSettings(clockId: string, settings) {
+  settings = toValue(settings);
   localStorage.setItem(`zyt-${clockId}`, JSON.stringify(settings));
 }
 
@@ -93,8 +115,6 @@ export default function useSettings(
     // override defaults with local storage items:
     ...(JSON.parse(window.localStorage.getItem(`zyt-${clockId}`) || "{}") ||
       {}),
-    // override defaults with Query Param items:
-    // ...queryString.parse(location.search),
     // override defaults with initial settings:
     ...initialSettings,
   });
