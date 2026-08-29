@@ -1,12 +1,12 @@
 {
   "name": "zyt",
-  "version": "0.0.0",
+  "version": "2.0.0-beta1",
   "type": "module",
   "scripts": {
     "build": "NODE_ENV=production vite build --mode production",
     "watch": "vite build --watch --mode development",
     "build-site": "npm run build && cp dist/* zyt.alexi.ch-site/",
-    "build-site-docker": "docker build -t registry.alexi.ch/zyt.alexi.ch -f Dockerfile-zyt.alexi.ch ."
+    "build-site-docker": "docker buildx build --platform linux/amd64,linux/arm64 -t registry.alexi.ch/zyt:latest -f nginx-zyt.alexi.ch/Dockerfile --push ."
   },
   "dependencies": {
     "vue": "^3.5.12"

@@ -118,6 +118,42 @@ builds the dist lib to `dist/`
 * `npm run build-site`
 * Output goes to `zyt.alexi.ch-site/` folder
 
+
+### Build production docker image
+
+I publish a Docker image to my own registry, `registry.alexi.ch`.
+This is handled via the script `npm run build-site-docker`.
+
+The script builds **one multi-arch image** (`linux/amd64` and `linux/arm64`) with `docker buildx` and
+pushes it directly to the registry:
+
+```bash
+docker login registry.alexi.ch
+npm run build-site-docker
+```
+
+The result is a single manifest list tagged `registry.alexi.ch/zyt:latest`, which
+contains both architectures.
+
+*NOTE* that a multi-arch build must be pushed in the same step (`--push`): the local Docker image
+store cannot hold a manifest list, so `docker build` alone does not work here.
+
+Requirements:
+
+* A `buildx` builder with the `docker-container` driver (this driver can build for other
+  architectures via QEMU emulation). Show the available builders with:
+
+  ```bash
+  docker buildx ls
+  ```
+
+  If no `docker-container` builder exists, create and select one:
+
+  ```bash
+  docker buildx create --name multiarch --driver docker-container --use
+  docker buildx inspect --bootstrap
+  ```
+
 ### build and publish npm package
 
 // TODO
